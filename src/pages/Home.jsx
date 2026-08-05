@@ -37,11 +37,7 @@ export default function Home() {
     { title: "Live Projects", desc: "Build industry-relevant final projects that simulate commercial environments.", icon: FileCode },
     { title: "Placement Assistance", desc: "Dedicated placement cell organizing active recruitment drives.", icon: Briefcase },
     { title: "Mock Interviews", desc: "Polishing technical and soft skills through simulated interview setups.", icon: MessagesSquare },
-    { title: "Resume Building", desc: "Create high-converting resumes, portfolios, and LinkedIn profiles.", icon: FileSpreadsheet },
-    { title: "Flexible Learning", desc: "Choose between morning/evening, weekday, or weekend batch shifts.", icon: Clock },
-    { title: "Affordable Fees", desc: "Competitive pricing structures with easy installment/EMI plans.", icon: CreditCard },
-    { title: "Career Guidance", desc: "One-on-one counseling to match skills with targeted IT profiles.", icon: Compass },
-    { title: "Industry-Oriented Curriculum", desc: "Syllabi updated regularly to match modern tooling demands.", icon: GraduationCap }
+    { title: "Resume Building", desc: "Create high-converting resumes, portfolios, and LinkedIn profiles.", icon: FileSpreadsheet }
   ]
 
   // Framer Motion variant configs
