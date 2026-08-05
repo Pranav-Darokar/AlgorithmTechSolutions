@@ -1,0 +1,42 @@
+export const mentors = [
+  {
+    id: "rahul-sharma",
+    name: "Dr. Rahul Sharma",
+    photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=250&h=250",
+    qualification: "M.Tech, Ph.D. in Computer Science",
+    experience: "10+ Years",
+    specialization: "Artificial Intelligence & NLP",
+    skills: ["AI Modeling", "Python", "Generative AI", "Data Operations"],
+    bio: "Ex-Data Scientist at a leading global tech firm. Dr. Sharma specializes in AI modeling and prompt engineering, bringing deep practical knowledge from commercial LLM deployments.",
+  },
+  {
+    id: "priya-patel",
+    name: "Priya Patel",
+    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=250&h=250",
+    qualification: "B.E. in Information Technology",
+    experience: "8+ Years",
+    specialization: "Software Quality Assurance",
+    skills: ["Selenium", "Java", "API Testing", "Agile Sprints"],
+    bio: "Lead QA Engineer with extensive history in automation testing architectures. Priya has trained over 500+ corporate professionals in writing robust Selenium suites.",
+  },
+  {
+    id: "amit-verma",
+    name: "Amit Verma",
+    photo: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=250&h=250",
+    qualification: "MCA (Master of Computer Applications)",
+    experience: "7+ Years",
+    specialization: "Mobile Architectures",
+    skills: ["Kotlin", "React Native", "Android SDK", "State Management"],
+    bio: "Indie app developer and corporate trainer. Amit has built and deployed over 15+ commercial mobile products, with expertise in cross-platform rendering optimization.",
+  },
+  {
+    id: "sanjay-kulkarni",
+    name: "Sanjay Kulkarni",
+    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=250&h=250",
+    qualification: "M.Tech in Instrumentation & Control",
+    experience: "12+ Years",
+    specialization: "Industrial Automation",
+    skills: ["LabVIEW Core", "DAQ Systems", "Automation Loops", "R&D Testing"],
+    bio: "Certified LabVIEW Developer (CLD) with a solid industrial instrumentation background. Sanjay designs custom automation test benches for automobile and manufacturing firms.",
+  }
+]
