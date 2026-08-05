@@ -66,7 +66,7 @@ export default function Contact() {
   const contactDetails = [
     {
       title: "Our Address",
-      desc: "Youthville Hostel, Sahu Colony, Near Cummins College Road, Karve Nagar, Pune - 411052",
+      desc: "AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune",
       icon: MapPin,
     },
     {
@@ -241,31 +241,35 @@ export default function Contact() {
             align="center"
           />
 
-          <Card className="overflow-hidden border border-border/60 shadow-lg relative group h-[400px]">
-            {/* Mock Maps background grid */}
-            <div className="absolute inset-0 bg-sky-100 dark:bg-slate-900 bg-grid-glow flex items-center justify-center">
-              
-              {/* Map pin vector graphic */}
-              <div className="text-center space-y-3 z-10 p-6 glass-card rounded-2xl max-w-sm shadow-xl">
-                <div className="bg-red-500 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto shadow-md animate-bounce">
-                  <MapPin size={24} />
-                </div>
-                <h4 className="font-bold text-base font-display">Algorithm Tech Campus</h4>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Youthville Hostel, Sahu Colony, Near Cummins College Road, Karve Nagar, Pune - 411052
-                </p>
-                <a
-                  href="https://maps.google.com/?q=Youthville+Hostel+Sahu+Colony+Karve+Nagar+Pune"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block pt-1"
-                >
-                  <Button variant="gradient" size="sm">
-                    Open in Google Maps
-                  </Button>
-                </a>
-              </div>
+          <Card className="overflow-hidden border border-border/60 shadow-lg relative group h-[450px]">
+            {/* Live Google Map iframe */}
+            <iframe
+              title="AlgorithmTech Location Map"
+              src="https://maps.google.com/maps?q=18.485034,73.8158793&z=17&output=embed"
+              className="w-full h-full border-0"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
 
+            {/* Map info overlay card */}
+            <div className="absolute bottom-6 left-6 z-10 p-5 glass-card rounded-2xl max-w-sm shadow-xl border border-border/60">
+              <h4 className="font-bold text-base font-display flex items-center gap-2 text-foreground">
+                <MapPin size={18} className="text-primary shrink-0" /> AlgorithmTech Campus
+              </h4>
+              <p className="text-xs text-muted-foreground leading-relaxed mt-1.5">
+                AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune
+              </p>
+              <a
+                href="https://www.google.com/maps/place/18%C2%B029'06.1%22N+73%C2%B048'57.2%22E/@18.485034,73.8133044,17z/data=!3m1!4b1!4m4!3m3!8m2!3d18.485034!4d73.8158793?hl=en&entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3"
+              >
+                <Button variant="gradient" size="sm">
+                  Open in Google Maps
+                </Button>
+              </a>
             </div>
           </Card>
         </Container>
