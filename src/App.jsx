@@ -9,7 +9,6 @@ const Courses = React.lazy(() => import('./pages/Courses'))
 const CourseDetail = React.lazy(() => import('./pages/CourseDetail'))
 const Mentors = React.lazy(() => import('./pages/Mentors'))
 const Placements = React.lazy(() => import('./pages/Placements'))
-const Gallery = React.lazy(() => import('./pages/Gallery'))
 const Contact = React.lazy(() => import('./pages/Contact'))
 
 // Premium loading spinner component to display during page chunks retrieval
@@ -36,7 +35,6 @@ function App() {
             <Route path="/courses/:courseId" element={<CourseDetail />} />
             <Route path="/mentors" element={<Mentors />} />
             <Route path="/placements" element={<Placements />} />
-            <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </Suspense>

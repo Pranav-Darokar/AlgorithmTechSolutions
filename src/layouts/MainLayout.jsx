@@ -30,7 +30,7 @@ export default function MainLayout({ children }) {
 
       {/* Floating WhatsApp CTA */}
       <motion.a
-        href="https://wa.me/919881150150?text=Hi%2C%20I'm%20interested%20in%20IT%20Training%20courses%20at%20Algorithm%20Tech."
+        href="https://wa.me/918436963334?text=Hi%2C%20I'm%20interested%20in%20IT%20Training%20courses%20at%20Algorithm%20Tech."
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3.5 rounded-full shadow-lg shadow-emerald-500/20 flex items-center justify-center transition-transform hover:scale-110 active:scale-95 duration-200"

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { 
-  Users, Settings, FileCode, Briefcase, MessagesSquare, 
+import {
+  Users, Settings, FileCode, Briefcase, MessagesSquare,
   FileSpreadsheet, Clock, CreditCard, Compass, GraduationCap,
   ArrowRight, Sparkles, CheckCircle2, ChevronRight
 } from 'lucide-react'
@@ -22,7 +22,6 @@ import { courses } from '@/data/courses'
 import { mentors } from '@/data/mentors'
 import { placementStats, hiringPartners } from '@/data/placements'
 import { testimonials } from '@/data/testimonials'
-import { galleryItems } from '@/data/gallery'
 import { faqs } from '@/data/faq'
 
 // Import Hero Image asset
@@ -57,7 +56,7 @@ export default function Home() {
 
   return (
     <div className="space-y-24 pb-20">
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden pt-8 md:pt-16 pb-20">
         <Container>
@@ -115,7 +114,7 @@ export default function Home() {
       <section className="py-8">
         <Container>
           <motion.div {...fadeInUp} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             {/* Left Image block */}
             <div className="lg:col-span-5 relative">
               <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-secondary rounded-2xl filter blur-xl opacity-30 -z-10" />
@@ -134,9 +133,9 @@ export default function Home() {
                 align="left"
               />
               <p className="text-base text-muted-foreground leading-relaxed">
-                Algorithm Tech Solutions was founded with a clear vision: to bridge the gap between academic education and modern enterprise requirements. We offer specialized syllabi in high-value subfields of Software Engineering and AI Operations.
+                Algorithm Tech Solutions was founded with a clear vision: to bridge the gap between academic education and modern enterprise requirements. We offer specialized syllabus in high-value subfields of Software Engineering and AI Operations.
               </p>
-              
+
               <div className="grid sm:grid-cols-2 gap-4 pt-2">
                 <div className="space-y-2">
                   <h4 className="font-bold flex items-center gap-2 text-primary">
@@ -174,7 +173,7 @@ export default function Home() {
             subtitle="Explore our advantages built to transition learners into working industry candidates."
           />
 
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             whileInView="whileInView"
@@ -246,7 +245,7 @@ export default function Home() {
       {/* 5. PLACEMENT HIGHLIGHTS */}
       <section className="py-16 bg-gradient-to-b from-primary/5 via-transparent to-transparent border-y">
         <Container className="space-y-16">
-          
+
           {/* Animated Counter Stats */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {placementStats.map((stat, i) => (
@@ -273,7 +272,7 @@ export default function Home() {
             </h4>
             <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center opacity-70">
               {hiringPartners.map((partner) => (
-                <div 
+                <div
                   key={partner.name}
                   className="bg-card px-6 py-4.5 border rounded-lg hover:opacity-100 hover:border-primary/40 hover:shadow-sm transition-all duration-200 text-center w-full font-display font-bold text-sm tracking-widest text-muted-foreground"
                 >
@@ -282,7 +281,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          
+
         </Container>
       </section>
 
@@ -350,57 +349,7 @@ export default function Home() {
         </Container>
       </section>
 
-      {/* 8. GALLERY PREVIEW */}
-      <section className="py-8">
-        <Container className="space-y-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <SectionTitle
-              badge="Life at Algorithm Tech Solutions"
-              title="Campus & Classroom Highlights"
-              subtitle="Browse glimpses of active laboratories, interactive workshops, and job placement drives."
-              align="left"
-              className="mx-0"
-            />
-            <Link to="/gallery">
-              <Button variant="outline" className="gap-2 self-start md:self-end">
-                View Full Gallery <ChevronRight size={16} />
-              </Button>
-            </Link>
-          </div>
 
-          <motion.div
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="whileInView"
-            viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            {galleryItems.slice(0, 3).map((item) => (
-              <motion.div 
-                key={item.id}
-                variants={fadeInUp}
-                whileHover={{ y: -6 }}
-                className="group relative h-64 rounded-xl border border-border/50 overflow-hidden bg-muted cursor-pointer"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[10px] text-secondary font-bold uppercase tracking-wider mb-0.5">
-                    {item.category}
-                  </span>
-                  <h4 className="text-white text-base font-bold font-display tracking-tight">
-                    {item.title}
-                  </h4>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </Container>
-      </section>
 
       {/* 9. FAQ ACCORDION SECTION */}
       <section className="py-8">
@@ -428,7 +377,7 @@ export default function Home() {
           <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-primary to-accent py-16 px-6 md:px-12 text-center text-white space-y-6 shadow-xl shadow-primary/20">
             {/* Background Blob shape */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.15),transparent)] pointer-events-none" />
-            
+
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20">
               Limited Seats Available for Next Batch
             </div>
@@ -436,7 +385,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-5xl font-extrabold max-w-3xl mx-auto tracking-tight leading-tight font-display">
               Ready to Accelerate Your Career in Information Technology?
             </h2>
-            
+
             <p className="text-white/80 max-w-xl mx-auto text-base md:text-lg">
               Book a free counseling slot with our technical guides to pick the perfect course syllabus.
             </p>

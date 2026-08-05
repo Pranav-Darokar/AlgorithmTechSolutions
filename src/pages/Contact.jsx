@@ -71,8 +71,7 @@ export default function Contact() {
     },
     {
       title: "Direct Hotlines",
-      desc: "+91 98811 50150",
-      descSecondary: "+91 98811 50151",
+      desc: "+91 84369 63334",
       icon: Phone,
     },
     {
@@ -135,7 +134,7 @@ export default function Contact() {
                 <p className="text-xs text-muted-foreground">Chat with our counseling leads on WhatsApp.</p>
               </div>
               <a
-                href="https://wa.me/919881150150?text=Hi%2C%20I'm%20interested%20in%20IT%20Training%20courses%20at%20Algorithm%20Tech."
+                href="https://wa.me/918436963334?text=Hi%2C%20I'm%20interested%20in%20IT%20Training%20courses%20at%20Algorithm%20Tech."
                 target="_blank"
                 rel="noopener noreferrer"
               >

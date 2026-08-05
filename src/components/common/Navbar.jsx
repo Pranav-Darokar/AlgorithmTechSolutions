@@ -34,7 +34,6 @@ export default function Navbar() {
     { name: 'Courses', path: '/courses' },
     { name: 'Mentors', path: '/mentors' },
     { name: 'Placements', path: '/placements' },
-    { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
   ]
 

@@ -272,9 +272,9 @@ export default function CourseDetail() {
             <div className="p-4 bg-muted/40 border rounded-xl space-y-3">
               <h5 className="font-bold text-xs uppercase tracking-wider text-muted-foreground">Direct Desk</h5>
               <div className="space-y-2 text-xs">
-                <a href="tel:+919881150150" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <a href="tel:+918436963334" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Phone size={14} className="text-primary shrink-0" />
-                  <span>+91 98811 50150</span>
+                  <span>+91 84369 63334</span>
                 </a>
                 <a href="mailto:admissions@algorithmtech.in" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={14} className="text-primary shrink-0" />

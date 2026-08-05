@@ -13,7 +13,6 @@ export default function Footer() {
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
     { name: 'Placements', path: '/placements' },
-    { name: 'Gallery', path: '/gallery' },
     { name: 'Contact', path: '/contact' },
   ]
 
@@ -112,7 +111,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={16} className="text-primary shrink-0" />
-              <span>+91 98811 50150</span>
+              <span>+91 84369 63334</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-primary shrink-0" />
