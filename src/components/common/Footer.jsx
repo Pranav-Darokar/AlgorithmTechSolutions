@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
-import logoImg from '@/assets/logo.png'
+import logoIconImg from '@/assets/logo_icon.png'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -32,16 +32,16 @@ export default function Footer() {
         <div className="space-y-4">
           <Link to="/" className="flex items-center gap-2.5">
             <img
-              src={logoImg}
+              src={logoIconImg}
               alt="Algorithm Tech Solutions Logo"
-              className="w-11 h-11 object-contain rounded-lg"
+              className="h-11 w-auto object-contain"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-display font-extrabold text-base tracking-tight text-foreground">
-                ALGORITHM <span className="text-primary font-bold">TECH</span>
+              <span className="font-display font-extrabold text-xl tracking-tight text-foreground">
+                AlgorithmTech
               </span>
-              <span className="text-[9px] md:text-[10px] font-bold tracking-[0.22em] text-muted-foreground uppercase mt-0.5">
-                Solutions
+              <span className="text-[10px] font-bold tracking-[0.24em] text-[#00A3FF] dark:text-[#38BDF8] uppercase mt-0.5">
+                SOLUTIONS
               </span>
             </div>
           </Link>

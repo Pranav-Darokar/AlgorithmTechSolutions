@@ -126,7 +126,7 @@ export default function CourseDetail() {
 
             <Card className="bg-card/40 backdrop-blur-sm border border-border/50">
               <CardContent className="p-5 flex items-center gap-4">
-                <div className="bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 p-2.5 rounded-lg border border-emerald-500/20">
+                <div className="bg-[#DF8600]/10 text-[#DF8600] dark:text-amber-400 p-2.5 rounded-lg border border-[#DF8600]/20">
                   <ShieldCheck size={20} />
                 </div>
                 <div>
@@ -208,7 +208,7 @@ export default function CourseDetail() {
 
                 {submitted ? (
                   <div className="text-center py-8 space-y-3">
-                    <CheckCircle2 className="mx-auto text-emerald-500 w-12 h-12 animate-bounce" />
+                    <CheckCircle2 className="mx-auto text-[#DF8600] w-12 h-12 animate-bounce" />
                     <h5 className="font-bold font-display text-sm">Enquiry Registered!</h5>
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       Thank you! Our technical guide will call you on your mobile number to confirm batch options.

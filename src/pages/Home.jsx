@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import {
   Users, Settings, FileCode, Briefcase, MessagesSquare,
   FileSpreadsheet, Clock, CreditCard, Compass, GraduationCap,
-  ArrowRight, Sparkles, CheckCircle2, ChevronRight
+  ArrowRight, Sparkles, CheckCircle2, ChevronRight, Phone,
+  Cpu, Cloud, Terminal, Code2, Database, Layers, Server, ShieldCheck
 } from 'lucide-react'
 
 // Import components
@@ -27,7 +28,8 @@ import { faqs } from '@/data/faq'
 // Import Hero Image asset
 import heroBgImg from '@/assets/hero_bg.png'
 import logoImg from '@/assets/logo.png'
-import heroStudentImg from '@/assets/hero_girl.png'
+import heroWorkingWomanImg from '@/assets/hero_working_woman_transparent.png'
+
 export default function Home() {
   // Why Choose Us features definition
   const features = [
@@ -54,59 +56,167 @@ export default function Home() {
     transition: { staggerChildren: 0.1 }
   }
 
+  const techBadges = [
+    { name: 'AI & Prompt Eng', icon: Sparkles, color: 'text-amber-500 bg-amber-500/10 border-amber-500/20' },
+    { name: 'AWS Cloud & DevOps', icon: Cloud, color: 'text-sky-500 bg-sky-500/10 border-sky-500/20' },
+    { name: 'Data Annotation', icon: Database, color: 'text-blue-600 bg-blue-600/10 border-blue-600/20' },
+    { name: 'Full-Stack Dev', icon: Code2, color: 'text-emerald-500 bg-emerald-500/10 border-emerald-500/20' },
+    { name: 'QA Automation', icon: ShieldCheck, color: 'text-indigo-500 bg-indigo-500/10 border-indigo-500/20' },
+    { name: 'LabVIEW Industrial', icon: Cpu, color: 'text-orange-500 bg-orange-500/10 border-orange-500/20' }
+  ]
+
   return (
     <div className="space-y-24 pb-20">
 
       {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden pt-8 md:pt-16 pb-20">
-        <Container>
+      <section className="relative overflow-hidden bg-[#F0F9FF] dark:bg-[#0B132B] pt-6 pb-16 lg:py-20 min-h-[680px] flex items-center transition-colors">
+        {/* Soft Ice Blue vector wave background curves (bottom right) */}
+        <div className="absolute bottom-0 right-0 w-full max-w-4xl h-80 pointer-events-none opacity-90 dark:opacity-40 overflow-hidden">
+          <svg className="w-full h-full" viewBox="0 0 1000 400" fill="none" preserveAspectRatio="none">
+            <path d="M400 400C600 350 750 200 1000 250V400H400Z" fill="#E0F2FE" fillOpacity="0.9" />
+            <path d="M200 400C450 320 650 150 1000 180V400H200Z" fill="#BAE6FD" fillOpacity="0.7" />
+            <path d="M0 400C300 360 550 240 1000 290V400H0Z" fill="#7DD3FC" fillOpacity="0.4" />
+            <path d="M600 400C750 310 880 260 1000 280V400H600Z" fill="#0284C7" fillOpacity="0.1" />
+          </svg>
+        </div>
 
-          {/* Text Content — centered */}
+        {/* Matrix grid of dots (top right accent) */}
+        <div className="absolute top-8 right-12 hidden lg:block pointer-events-none opacity-30">
+          <svg width="140" height="120" viewBox="0 0 140 120" fill="none">
+            <pattern id="dot-matrix" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+              <circle cx="3" cy="3" r="2" fill="#0284C7" />
+            </pattern>
+            <rect width="140" height="120" fill="url(#dot-matrix)" />
+          </svg>
+        </div>
+
+        {/* Floating Technology Badges */}
+        <motion.div
+          animate={{ y: [0, -12, 0] }}
+          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-4 left-2 sm:left-6 lg:left-12 z-20 flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-blue-200 dark:border-blue-800/80 shadow-lg shadow-blue-500/10 backdrop-blur-md"
+        >
+          <span className="text-sm sm:text-base">🤖</span>
+          <span className="text-[11px] sm:text-xs font-extrabold text-blue-900 dark:text-blue-200">Generative AI</span>
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 14, 0] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+          className="absolute top-6 right-2 sm:right-6 lg:right-12 z-20 flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-purple-200 dark:border-purple-800/80 shadow-lg shadow-purple-500/10 backdrop-blur-md"
+        >
+          <span className="text-sm sm:text-base">🧪</span>
+          <span className="text-[11px] sm:text-xs font-extrabold text-purple-900 dark:text-purple-200">Software Testing</span>
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+          className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-2 lg:left-8 z-20 items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-emerald-200 dark:border-emerald-800/80 shadow-lg shadow-emerald-500/10 backdrop-blur-md"
+        >
+          <span className="text-base">🏷️</span>
+          <span className="text-xs font-extrabold text-emerald-900 dark:text-emerald-200">Data Annotation</span>
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, 12, 0] }}
+          transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 2.2 }}
+          className="hidden sm:flex absolute top-1/2 -translate-y-1/2 right-2 lg:right-8 z-20 items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-amber-200 dark:border-amber-800/80 shadow-lg shadow-amber-500/10 backdrop-blur-md"
+        >
+          <span className="text-base">📱</span>
+          <span className="text-xs font-extrabold text-amber-900 dark:text-amber-200">App Development</span>
+        </motion.div>
+
+        <motion.div
+          animate={{ y: [0, -8, 0] }}
+          transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="hidden md:flex absolute bottom-6 left-12 lg:left-24 z-20 items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-cyan-200 dark:border-cyan-800/80 shadow-lg shadow-cyan-500/10 backdrop-blur-md"
+        >
+          <span className="text-base">🔬</span>
+          <span className="text-xs font-extrabold text-cyan-900 dark:text-cyan-200">LabVIEW Training</span>
+        </motion.div>
+
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center py-8 sm:py-14">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center space-y-6"
+            className="space-y-6 flex flex-col items-center"
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-              <Sparkles size={12} className="text-secondary animate-pulse" />
-              Corporate Training Excellence
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 dark:bg-slate-900/90 border border-sky-200 dark:border-slate-700 text-[#0F172A] dark:text-white text-xs font-semibold shadow-xs">
+              <span className="text-[#F59E0B]">✨</span> Corporate Training Institute
             </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-[1.05]">
-              Transform Your Career with <span className="gradient-text-primary">Industry-Focused IT Training</span>
+
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-[#0F172A] dark:text-white leading-[1.12]">
+              Transform Your Career with <br className="hidden sm:block" />
+              <span>Industry-Focused </span>
+              <span className="text-[#F59E0B]">
+                IT Training
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+
+            {/* Subtitle */}
+            <p className="text-[#475569] dark:text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-normal mx-auto">
               Gain practical skills through expert-led training, hands-on laboratory modules, live projects, and direct placement support.
             </p>
-            <div className="flex flex-wrap gap-4 pt-2 justify-center">
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
               <Link to="/contact">
-                <Button variant="gradient" size="lg" className="gap-2">
-                  Enroll Now <ArrowRight size={16} />
-                </Button>
+                <button className="bg-[#0F172A] text-white dark:bg-white dark:text-[#0F172A] hover:bg-[#1E293B] dark:hover:bg-slate-100 font-bold rounded-2xl px-8 py-3.5 shadow-lg shadow-slate-900/20 flex items-center gap-2.5 transition-all hover:scale-[1.02] text-sm md:text-base">
+                  Enroll Now <ArrowRight size={18} />
+                </button>
               </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg">Book Free Demo</Button>
+              <Link to="/courses">
+                <button className="bg-white dark:bg-slate-900 border border-[#CBD5E1] dark:border-slate-700 text-[#0F172A] dark:text-white font-bold rounded-2xl px-8 py-3.5 hover:bg-slate-50 dark:hover:bg-slate-800 shadow-sm transition-all text-sm md:text-base">
+                  Book Free Demo
+                </button>
               </Link>
             </div>
 
-            {/* Stats row */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border/60 max-w-md mx-auto">
-              <div>
-                <h4 className="text-xl font-bold text-primary">100%</h4>
-                <p className="text-xs text-muted-foreground">Placement Support</p>
+            {/* Bottom Stats Card */}
+            <div className="bg-white/95 dark:bg-[#141F36]/95 backdrop-blur-md rounded-2xl sm:rounded-3xl border border-sky-100 dark:border-slate-800 shadow-xl shadow-sky-900/5 p-4 sm:p-6 flex items-center justify-center gap-4 sm:gap-10 max-w-2xl w-full mt-6">
+              {/* Stat 1 */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0F172A]/10 dark:bg-white/10 flex items-center justify-center text-[#0F172A] dark:text-white shrink-0">
+                  <Users className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="text-left">
+                  <div className="text-xl sm:text-2xl font-black text-[#0F172A] dark:text-white">100%</div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#475569] dark:text-slate-300">Placement Support</div>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-bold text-primary">15+</h4>
-                <p className="text-xs text-muted-foreground">Live Projects</p>
+
+              <div className="h-9 w-px bg-slate-200 dark:bg-slate-700" />
+
+              {/* Stat 2 */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0F172A]/10 dark:bg-white/10 flex items-center justify-center text-[#0F172A] dark:text-white shrink-0">
+                  <Briefcase className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="text-left">
+                  <div className="text-xl sm:text-2xl font-black text-[#0F172A] dark:text-white">15+</div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#475569] dark:text-slate-300">Live Projects</div>
+                </div>
               </div>
-              <div>
-                <h4 className="text-xl font-bold text-primary">500+</h4>
-                <p className="text-xs text-muted-foreground">Alumni Network</p>
+
+              <div className="h-9 w-px bg-slate-200 dark:bg-slate-700" />
+
+              {/* Stat 3 */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0F172A]/10 dark:bg-white/10 flex items-center justify-center text-[#0F172A] dark:text-white shrink-0">
+                  <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
+                </div>
+                <div className="text-left">
+                  <div className="text-xl sm:text-2xl font-black text-[#0F172A] dark:text-white">500+</div>
+                  <div className="text-[11px] sm:text-xs font-semibold text-[#475569] dark:text-slate-300">Alumni Network</div>
+                </div>
               </div>
             </div>
           </motion.div>
-
-        </Container>
+        </div>
       </section>
 
 

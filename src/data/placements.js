@@ -15,6 +15,13 @@ export const hiringPartners = [
   { name: "Capgemini", logo: "Capgemini" }
 ]
 
+export const techPartners = [
+  { id: "aws", name: "AWS", type: "Cloud Partner" },
+  { id: "oracle", name: "Oracle", type: "Database & Enterprise Partner" },
+  { id: "nvidia", name: "NVIDIA", type: "AI & Compute Partner" },
+  { id: "bharatpgs", name: "Bharat PGs", type: "Residential & Ecosystem Partner" }
+]
+
 export const successStories = [
   {
     id: "story-1",

@@ -84,7 +84,7 @@ export default function Placements() {
                       <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">
                         {story.course}
                       </span>
-                      <span className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                      <span className="text-xs font-semibold text-[#DF8600] dark:text-amber-400">
                         Package: {story.package}
                       </span>
                     </div>

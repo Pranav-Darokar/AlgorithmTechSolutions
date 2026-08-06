@@ -95,7 +95,7 @@ export default function Courses() {
                   onClick={() => setActiveCategory(cat)}
                   className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
                     activeCategory === cat
-                      ? "bg-primary border-primary text-primary-foreground shadow-sm shadow-primary/20"
+                      ? "bg-[#0F172A] dark:bg-white border-[#0F172A] dark:border-white text-white dark:text-[#0F172A] shadow-sm"
                       : "bg-background border-border hover:bg-muted text-muted-foreground"
                   }`}
                 >
@@ -115,7 +115,7 @@ export default function Courses() {
                   onClick={() => setActiveLevel(lvl)}
                   className={`text-xs font-semibold px-3 py-1.5 rounded-lg border transition-all cursor-pointer ${
                     activeLevel === lvl
-                      ? "bg-primary border-primary text-primary-foreground shadow-sm shadow-primary/20"
+                      ? "bg-[#0F172A] dark:bg-white border-[#0F172A] dark:border-white text-white dark:text-[#0F172A] shadow-sm"
                       : "bg-background border-border hover:bg-muted text-muted-foreground"
                   }`}
                 >

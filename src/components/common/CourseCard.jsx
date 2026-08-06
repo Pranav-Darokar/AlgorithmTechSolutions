@@ -48,7 +48,7 @@ export default function CourseCard({ course }) {
 
         <div className="mt-4 flex flex-wrap gap-3">
           {certificateIncluded && (
-            <span className="inline-flex items-center gap-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-medium">
+            <span className="inline-flex items-center gap-1 text-[11px] text-[#DF8600] dark:text-amber-400 font-medium">
               <Icons.CheckCircle size={12} className="stroke-[2.5]" /> Certificate
             </span>
           )}

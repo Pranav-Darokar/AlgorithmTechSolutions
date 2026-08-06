@@ -15,10 +15,10 @@ const Button = forwardRef(({
   const baseStyles = 'inline-flex items-center justify-center font-display font-medium rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 cursor-pointer'
   
   const variants = {
-    primary: 'bg-primary text-primary-foreground hover:bg-primary/95 shadow-md shadow-primary/20',
-    secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/95 shadow-md shadow-secondary/15',
-    gradient: 'bg-gradient-to-r from-primary to-secondary text-white hover:opacity-95 shadow-md shadow-primary/20',
-    outline: 'border border-border bg-background hover:bg-muted text-foreground',
+    primary: 'bg-[#0F172A] hover:bg-[#1E293B] text-white dark:bg-white dark:text-[#0F172A] dark:hover:bg-slate-100 font-bold rounded-2xl shadow-lg shadow-slate-900/20',
+    secondary: 'bg-[#F59E0B] text-white hover:bg-[#D97706] shadow-md shadow-amber-500/20',
+    gradient: 'bg-[#0F172A] hover:bg-[#1E293B] text-white dark:bg-white dark:text-[#0F172A] dark:hover:bg-slate-100 font-bold rounded-2xl shadow-lg shadow-slate-900/20',
+    outline: 'border border-border bg-background hover:bg-muted text-foreground font-semibold rounded-2xl',
     ghost: 'hover:bg-muted text-foreground',
   }
 

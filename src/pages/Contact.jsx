@@ -128,9 +128,9 @@ export default function Contact() {
             </div>
 
             {/* Quick WhatsApp chat prompt */}
-            <div className="p-6 bg-emerald-500/10 border border-emerald-500/25 rounded-2xl flex items-center justify-between gap-4">
+            <div className="p-6 bg-blue-500/10 border border-blue-500/25 rounded-2xl flex items-center justify-between gap-4">
               <div className="space-y-1">
-                <h5 className="font-bold font-display text-emerald-800 dark:text-emerald-400 text-sm">Need Instant Support?</h5>
+                <h5 className="font-bold font-display text-[#19426C] dark:text-amber-400 text-sm">Need Instant Support?</h5>
                 <p className="text-xs text-muted-foreground">Chat with our counseling leads on WhatsApp.</p>
               </div>
               <a
@@ -152,7 +152,7 @@ export default function Contact() {
                 
                 {submitted ? (
                   <div className="text-center py-12 space-y-4">
-                    <CheckCircle2 className="mx-auto text-emerald-500 w-16 h-16 animate-bounce" />
+                    <CheckCircle2 className="mx-auto text-[#DF8600] w-16 h-16 animate-bounce" />
                     <h3 className="text-2xl font-bold font-display">Message Sent Successfully!</h3>
                     <p className="text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
                       Thank you for contacting us! Our counselor will review your selection and reach out on your mobile number within 2 hours.
