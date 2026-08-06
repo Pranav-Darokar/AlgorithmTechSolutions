@@ -90,52 +90,6 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* Floating Technology Badges */}
-        <motion.div
-          animate={{ y: [0, -12, 0] }}
-          transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-4 left-2 sm:left-6 lg:left-12 z-20 flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-blue-200 dark:border-blue-800/80 shadow-lg shadow-blue-500/10 backdrop-blur-md"
-        >
-          <span className="text-sm sm:text-base">🤖</span>
-          <span className="text-[11px] sm:text-xs font-extrabold text-blue-900 dark:text-blue-200">Generative AI</span>
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, 14, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-          className="absolute top-6 right-2 sm:right-6 lg:right-12 z-20 flex items-center gap-1.5 px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-purple-200 dark:border-purple-800/80 shadow-lg shadow-purple-500/10 backdrop-blur-md"
-        >
-          <span className="text-sm sm:text-base">🧪</span>
-          <span className="text-[11px] sm:text-xs font-extrabold text-purple-900 dark:text-purple-200">Software Testing</span>
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-          className="hidden sm:flex absolute top-1/2 -translate-y-1/2 left-2 lg:left-8 z-20 items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-emerald-200 dark:border-emerald-800/80 shadow-lg shadow-emerald-500/10 backdrop-blur-md"
-        >
-          <span className="text-base">🏷️</span>
-          <span className="text-xs font-extrabold text-emerald-900 dark:text-emerald-200">Data Annotation</span>
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, 12, 0] }}
-          transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 2.2 }}
-          className="hidden sm:flex absolute top-1/2 -translate-y-1/2 right-2 lg:right-8 z-20 items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-amber-200 dark:border-amber-800/80 shadow-lg shadow-amber-500/10 backdrop-blur-md"
-        >
-          <span className="text-base">📱</span>
-          <span className="text-xs font-extrabold text-amber-900 dark:text-amber-200">App Development</span>
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [0, -8, 0] }}
-          transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="hidden md:flex absolute bottom-6 left-12 lg:left-24 z-20 items-center gap-1.5 px-3.5 py-2 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-cyan-200 dark:border-cyan-800/80 shadow-lg shadow-cyan-500/10 backdrop-blur-md"
-        >
-          <span className="text-base">🔬</span>
-          <span className="text-xs font-extrabold text-cyan-900 dark:text-cyan-200">LabVIEW Training</span>
-        </motion.div>
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center py-8 sm:py-14">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
