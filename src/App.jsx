@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
+import ScrollToTop from './components/common/ScrollToTop'
 
 // Lazy load page components for split bundles and fast initial loading
 const Home = React.lazy(() => import('./pages/Home'))
@@ -26,6 +27,7 @@ function PageLoader() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <MainLayout>
         <Suspense fallback={<PageLoader />}>
           <Routes>

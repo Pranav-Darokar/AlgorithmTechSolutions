@@ -9,6 +9,7 @@ export default function CourseCard({ course }) {
     id,
     name,
     iconName,
+    image,
     shortDescription,
     duration,
     learningMode,
@@ -20,24 +21,54 @@ export default function CourseCard({ course }) {
   const IconComponent = Icons[iconName] || Icons.BookOpen
 
   return (
-    <Card interactive={true} className="flex flex-col h-full bg-card/60 backdrop-blur-sm border border-border/60">
-      <CardHeader className="relative pb-3">
-        <div className="flex justify-between items-start gap-4">
-          <div className="bg-primary/10 text-primary p-3 rounded-xl border border-primary/20">
-            <IconComponent size={24} className="stroke-[2]" />
+    <Card interactive={true} className="flex flex-col h-full bg-card/60 backdrop-blur-sm border border-border/60 overflow-hidden group">
+      {/* Course Banner Image */}
+      {image && (
+        <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent" />
+          
+          <div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-primary p-2 rounded-xl border border-white/20 shadow-xs">
+            <IconComponent size={20} className="stroke-[2]" />
           </div>
-          <div className="flex flex-wrap gap-1.5 justify-end">
-            <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/20">
+
+          <div className="absolute top-3 right-3 flex flex-wrap gap-1.5 justify-end">
+            <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-cyan-300 border border-white/10 shadow-xs">
               {duration}
-            </span>
-            <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-muted text-muted-foreground border">
-              {skillLevel}
             </span>
           </div>
         </div>
-        <CardTitle className="mt-4 text-xl font-bold">{name}</CardTitle>
-        <CardDescription className="text-xs text-muted-foreground mt-1">
-          Mode: {learningMode}
+      )}
+
+      <CardHeader className="relative pb-3">
+        {!image && (
+          <div className="flex justify-between items-start gap-4">
+            <div className="bg-primary/10 text-primary p-3 rounded-xl border border-primary/20">
+              <IconComponent size={24} className="stroke-[2]" />
+            </div>
+            <div className="flex flex-wrap gap-1.5 justify-end">
+              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-secondary/15 text-secondary border border-secondary/20">
+                {duration}
+              </span>
+              <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-muted text-muted-foreground border">
+                {skillLevel}
+              </span>
+            </div>
+          </div>
+        )}
+        <CardTitle className={`${image ? 'mt-1' : 'mt-4'} text-xl font-bold font-display`}>{name}</CardTitle>
+        <CardDescription className="text-xs text-muted-foreground mt-1 flex items-center justify-between">
+          <span>Mode: {learningMode}</span>
+          {image && (
+            <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-muted text-muted-foreground border">
+              {skillLevel}
+            </span>
+          )}
         </CardDescription>
       </CardHeader>
       

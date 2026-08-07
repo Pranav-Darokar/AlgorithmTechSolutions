@@ -62,23 +62,35 @@ export default function CourseDetail() {
   return (
     <div className="pb-24">
       {/* 1. HERO BANNER */}
-      <section className="relative overflow-hidden bg-card border-b py-20">
+      <section className="relative overflow-hidden bg-card border-b py-12 md:py-16">
         <div className="absolute inset-0 bg-grid-glow pointer-events-none" />
-        <Container className="relative space-y-4">
-          <Link to="/courses" className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline">
-            <ArrowLeft size={12} /> Back to Courses
-          </Link>
-          <div className="space-y-2">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
-              {course.skillLevel}
-            </span>
-            <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight font-display max-w-4xl leading-tight">
-              {course.name} Professional Certification
-            </h1>
-            <p className="text-sm md:text-base text-muted-foreground max-w-3xl leading-relaxed">
-              {course.shortDescription}
-            </p>
+        <Container className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="lg:col-span-7 space-y-4">
+            <Link to="/courses" className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline">
+              <ArrowLeft size={12} /> Back to Courses
+            </Link>
+            <div className="space-y-3">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary border border-primary/20">
+                {course.skillLevel}
+              </span>
+              <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight font-display max-w-4xl leading-tight">
+                {course.name} Professional Certification
+              </h1>
+              <p className="text-sm md:text-base text-muted-foreground max-w-3xl leading-relaxed">
+                {course.shortDescription}
+              </p>
+            </div>
           </div>
+
+          {course.image && (
+            <div className="lg:col-span-5 relative rounded-2xl overflow-hidden shadow-xl border border-border">
+              <img
+                src={course.image}
+                alt={course.name}
+                className="w-full h-56 sm:h-72 object-cover"
+              />
+            </div>
+          )}
         </Container>
       </section>
 

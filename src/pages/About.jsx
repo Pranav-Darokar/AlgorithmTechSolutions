@@ -4,6 +4,8 @@ import { CheckCircle2, Trophy, Users, ShieldAlert, Cpu, Laptop, GraduationCap } 
 import { Container } from '@/components/ui/Container'
 import { Card, CardContent } from '@/components/ui/Card'
 import SectionTitle from '@/components/common/SectionTitle'
+import CampusGallery from '@/components/common/CampusGallery'
+import aboutHeroClassroomImg from '@/assets/campus/about_hero_classroom.jpg'
 
 export default function About() {
   const coreValues = [
@@ -54,9 +56,9 @@ export default function About() {
           >
             <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-secondary rounded-2xl filter blur-xl opacity-30 -z-10" />
             <img
-              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600&h=450"
-              alt="IT Training classroom lab"
-              className="w-full object-cover rounded-2xl shadow-lg"
+              src={aboutHeroClassroomImg}
+              alt="AlgorithmTech Live Corporate IT Classroom Session Pune"
+              className="w-full h-80 sm:h-96 object-cover rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800"
             />
           </motion.div>
         </Container>
@@ -143,6 +145,9 @@ export default function About() {
           </div>
         </Container>
       </section>
+
+      {/* Campus & Life Gallery */}
+      <CampusGallery />
 
     </div>
   )

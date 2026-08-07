@@ -25,10 +25,12 @@ import { placementStats, hiringPartners } from '@/data/placements'
 import { testimonials } from '@/data/testimonials'
 import { faqs } from '@/data/faq'
 
-// Import Hero Image asset
-import heroBgImg from '@/assets/hero_bg.png'
-import logoImg from '@/assets/logo.png'
-import heroWorkingWomanImg from '@/assets/hero_working_woman_transparent.png'
+import CampusGallery from '@/components/common/CampusGallery'
+import instituteFrontImg from '@/assets/campus/institute_front.jpg'
+import awsPartnerImg from '@/assets/partners/aws.png'
+import oraclePartnerImg from '@/assets/partners/oracle.png'
+import nvidiaPartnerImg from '@/assets/partners/nvidia.jpg'
+import bharatPgPartnerImg from '@/assets/partners/bharat_pg.jpg'
 
 export default function Home() {
   // Why Choose Us features definition
@@ -66,10 +68,10 @@ export default function Home() {
   ]
 
   return (
-    <div className="space-y-24 pb-20">
+    <div className="space-y-12 md:space-y-16 pb-12">
 
       {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden bg-[#F0F9FF] dark:bg-[#0B132B] pt-6 pb-16 lg:py-20 min-h-[680px] flex items-center transition-colors">
+      <section className="relative overflow-hidden bg-[#F0F9FF] dark:bg-[#0B132B] py-8 lg:py-12 flex items-center transition-colors">
         {/* Soft Ice Blue vector wave background curves (bottom right) */}
         <div className="absolute bottom-0 right-0 w-full max-w-4xl h-80 pointer-events-none opacity-90 dark:opacity-40 overflow-hidden">
           <svg className="w-full h-full" viewBox="0 0 1000 400" fill="none" preserveAspectRatio="none">
@@ -90,7 +92,7 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center py-8 sm:py-14">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center py-4 sm:py-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -173,7 +175,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* 2. ABOUT INSTITUTE SECTION */}
       <section className="py-8">
         <Container>
@@ -183,9 +184,9 @@ export default function Home() {
             <div className="lg:col-span-5 relative">
               <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-secondary rounded-2xl filter blur-xl opacity-30 -z-10" />
               <img
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600&h=450"
-                alt="Students learning in institute lab"
-                className="w-full h-full object-cover rounded-2xl shadow-lg"
+                src={instituteFrontImg}
+                alt="AlgorithmTech Corporate Training Institute Center Pune"
+                className="w-full h-72 sm:h-96 object-cover object-top rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800"
               />
             </div>
 
@@ -227,10 +228,9 @@ export default function Home() {
           </motion.div>
         </Container>
       </section>
-
       {/* 3. WHY CHOOSE US SECTION */}
-      <section className="py-8 bg-card/30 border-y py-16">
-        <Container className="space-y-12">
+      <section className="py-6 md:py-8 bg-card/30 border-y">
+        <Container className="space-y-8">
           <SectionTitle
             badge="Why Us?"
             title="Syllabus Built for Placement Success"
@@ -270,8 +270,8 @@ export default function Home() {
       </section>
 
       {/* 4. AVAILABLE COURSES PREVIEW */}
-      <section className="py-8">
-        <Container className="space-y-12">
+      <section className="py-6 md:py-8">
+        <Container className="space-y-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <SectionTitle
               badge="IT Training Programs"
@@ -307,8 +307,8 @@ export default function Home() {
       </section>
 
       {/* 5. PLACEMENT HIGHLIGHTS */}
-      <section className="py-16 bg-gradient-to-b from-primary/5 via-transparent to-transparent border-y">
-        <Container className="space-y-16">
+      <section className="py-8 md:py-10 bg-gradient-to-b from-primary/5 via-transparent to-transparent border-y">
+        <Container className="space-y-8 md:space-y-10">
 
           {/* Animated Counter Stats */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -349,9 +349,12 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* 5.5 CAMPUS & LIFE GALLERY */}
+      <CampusGallery mode="marquee" />
+
       {/* 6. MENTORS PREVIEW */}
-      <section className="py-8">
-        <Container className="space-y-12">
+      <section className="py-6 md:py-8">
+        <Container className="space-y-8">
           <SectionTitle
             badge="Expert Faculty"
             title="Learn from Corporate Trainers"
@@ -363,9 +366,9 @@ export default function Home() {
             initial="initial"
             whileInView="whileInView"
             viewport={{ once: true, margin: "-100px" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5"
           >
-            {mentors.slice(0, 4).map((mentor) => (
+            {mentors.map((mentor) => (
               <motion.div
                 key={mentor.id}
                 variants={fadeInUp}
@@ -375,7 +378,7 @@ export default function Home() {
             ))}
           </motion.div>
 
-          <div className="text-center pt-4">
+          <div className="text-center pt-2">
             <Link to="/mentors">
               <Button variant="outline" className="gap-2">
                 Meet All Mentors <ChevronRight size={16} />
@@ -385,9 +388,60 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* 6.5. TECHNOLOGY PARTNERS SECTION */}
+      <section className="py-8 md:py-10 bg-slate-50/80 dark:bg-[#111827]/60 border-y border-slate-200/80 dark:border-slate-800/80">
+        <Container className="space-y-6 md:space-y-8">
+          <SectionTitle
+            badge="Industry Alliances"
+            title="Technology Partners"
+            subtitle="Collaborating with global tech pioneers to deliver enterprise-grade syllabus and infrastructure."
+          />
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto items-center">
+            
+            {/* 1. AWS */}
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 sm:p-5 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-amber-400/60 transition-all duration-300 group h-24 sm:h-28">
+              <img
+                src={awsPartnerImg}
+                alt="AWS Official Logo"
+                className="max-h-12 sm:max-h-14 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+            </div>
+
+            {/* 2. Oracle */}
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 sm:p-5 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-red-400/60 transition-all duration-300 group h-24 sm:h-28">
+              <img
+                src={oraclePartnerImg}
+                alt="Oracle Official Logo"
+                className="max-h-12 sm:max-h-14 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+            </div>
+
+            {/* 3. NVIDIA */}
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 sm:p-5 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-emerald-400/60 transition-all duration-300 group h-24 sm:h-28">
+              <img
+                src={nvidiaPartnerImg}
+                alt="NVIDIA Official Logo"
+                className="max-h-14 sm:max-h-16 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+            </div>
+
+            {/* 4. Bharat PGs */}
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-3 sm:p-4 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-amber-400/60 transition-all duration-300 group h-24 sm:h-28">
+              <img
+                src={bharatPgPartnerImg}
+                alt="Bharat PG Onboard & Search Logo"
+                className="max-h-18 sm:max-h-20 w-auto object-contain rounded-xl group-hover:scale-105 transition-transform"
+              />
+            </div>
+
+          </div>
+        </Container>
+      </section>
+
       {/* 7. STUDENT TESTIMONIALS */}
-      <section className="py-8 bg-card/20 border-y py-16">
-        <Container className="space-y-12">
+      <section className="py-6 md:py-8 bg-card/20 border-y">
+        <Container className="space-y-8">
           <SectionTitle
             badge="Success Reviews"
             title="What Our Alumni Say"
@@ -413,11 +467,9 @@ export default function Home() {
         </Container>
       </section>
 
-
-
       {/* 9. FAQ ACCORDION SECTION */}
-      <section className="py-8">
-        <Container className="max-w-4xl space-y-12">
+      <section className="py-6 md:py-8">
+        <Container className="max-w-4xl space-y-8">
           <SectionTitle
             badge="Frequently Asked Questions"
             title="Have Questions? We Have Answers"
@@ -436,9 +488,9 @@ export default function Home() {
       </section>
 
       {/* 10. CONTACT CALL-TO-ACTION (CTA) */}
-      <section className="py-8">
+      <section className="py-6 md:py-8">
         <Container>
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-primary to-accent py-16 px-6 md:px-12 text-center text-white space-y-6 shadow-xl shadow-primary/20">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-primary to-accent py-10 md:py-12 px-6 md:px-12 text-center text-white space-y-5 shadow-xl shadow-primary/20">
             {/* Background Blob shape */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.15),transparent)] pointer-events-none" />
 

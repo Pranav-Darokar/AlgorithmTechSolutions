@@ -2,12 +2,31 @@ import React, { useState, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
-import logoIconImg from '@/assets/logo_icon.png'
+import logoImg from '@/assets/logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme')
+      if (savedTheme) {
+        return savedTheme === 'dark'
+      }
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+    return false
+  })
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('theme', 'dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('theme', 'light')
+    }
+  }, [isDarkMode])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,8 +41,7 @@ export default function Navbar() {
   }, [])
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
-    document.documentElement.classList.toggle('dark')
+    setIsDarkMode(prev => !prev)
   }
 
   const navLinks = [
@@ -39,26 +57,21 @@ export default function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 dark:bg-[#0B132B]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800 py-2.5 shadow-sm'
-          : 'bg-white dark:bg-[#0B132B] py-3.5'
+          ? 'bg-white/90 dark:bg-[#0F172A]/90 backdrop-blur-md border-b border-slate-200/90 dark:border-slate-800/80 py-2.5 shadow-xs'
+          : 'bg-white dark:bg-[#0F172A] py-3.5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2.5 group">
           <img
-            src={logoIconImg}
-            alt="Algorithm Tech Solutions Emblem"
-            className="h-10 sm:h-12 md:h-13 w-auto object-contain group-hover:scale-105 transition-transform duration-200"
+            src={logoImg}
+            alt="AlgorithmTech Logo"
+            className="w-10 h-10 object-contain rounded-lg group-hover:scale-105 transition-transform duration-200"
           />
-          <div className="flex flex-col leading-none">
-            <span className="font-display font-extrabold text-xl sm:text-2xl md:text-[26px] tracking-tight text-[#0F172A] dark:text-white transition-colors">
-              AlgorithmTech
-            </span>
-            <span className="text-[10px] sm:text-[11px] md:text-[12px] font-bold tracking-[0.24em] text-[#00A3FF] dark:text-[#38BDF8] uppercase mt-0.5">
-              SOLUTIONS
-            </span>
-          </div>
+          <span className="font-display font-black text-xl sm:text-2xl tracking-tight text-[#0F172A] dark:text-white">
+            Algorithm<span className="text-blue-600 dark:text-cyan-400">Tech</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -68,8 +81,10 @@ export default function Navbar() {
               key={link.name}
               to={link.path}
               className={({ isActive }) =>
-                `text-sm font-bold transition-colors relative py-1 ${
-                  isActive ? 'text-[#19426C] dark:text-amber-400' : 'text-[#334155] dark:text-slate-200 hover:text-[#19426C] dark:hover:text-amber-400'
+                `text-sm font-semibold transition-colors relative py-1 ${
+                  isActive
+                    ? 'text-blue-600 dark:text-cyan-400 font-bold'
+                    : 'text-slate-700 dark:text-slate-200 hover:text-blue-600 dark:hover:text-cyan-400'
                 }`
               }
             >
@@ -79,7 +94,7 @@ export default function Navbar() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-[3px] bg-[#DF8600] rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[3px] bg-blue-600 dark:bg-cyan-400 rounded-full"
                     />
                   )}
                 </>
@@ -92,13 +107,14 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4">
           <button
             onClick={toggleDarkMode}
-            className="w-9 h-9 rounded-full flex items-center justify-center text-[#334155] dark:text-slate-200 hover:text-[#F59E0B] transition-colors"
-            aria-label="Toggle dark mode"
+            className="w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+            aria-label="Toggle theme"
+            title={isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
           >
-            {isDarkMode ? <Sun size={19} className="text-amber-400" /> : <Moon size={19} />}
+            {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-700" />}
           </button>
           <Link to="/contact">
-            <button className="bg-white dark:bg-slate-900 border border-[#CBD5E1] dark:border-slate-700 text-[#0F172A] dark:text-white font-bold rounded-full px-6 py-2.5 text-sm hover:bg-slate-50 dark:hover:bg-slate-800 shadow-sm transition-all hover:scale-[1.02]">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl px-5 py-2 text-sm shadow-sm transition-all hover:scale-[1.02] cursor-pointer">
               Register
             </button>
           </Link>
@@ -108,16 +124,16 @@ export default function Navbar() {
         <div className="flex items-center gap-3 lg:hidden">
           <button
             onClick={toggleDarkMode}
-            className="w-9 h-9 rounded-full flex items-center justify-center text-[#334155] dark:text-slate-200"
-            aria-label="Toggle dark mode"
+            className="w-9 h-9 rounded-xl border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-200"
+            aria-label="Toggle theme"
           >
-            {isDarkMode ? <Sun size={19} className="text-amber-400" /> : <Moon size={19} />}
+            {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-700" />}
           </button>
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-1.5 rounded-lg text-[#334155] dark:text-slate-200"
+            className="p-1.5 rounded-lg text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
@@ -130,7 +146,7 @@ export default function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-white dark:bg-[#141F36] border-b border-slate-200 dark:border-slate-800 shadow-lg overflow-hidden"
+            className="lg:hidden bg-white dark:bg-[#1E293B] border-b border-slate-200 dark:border-slate-800 shadow-lg overflow-hidden"
           >
             <div className="px-4 py-6 flex flex-col gap-3">
               {navLinks.map((link) => (
@@ -139,8 +155,8 @@ export default function Navbar() {
                   to={link.path}
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
-                    `text-base font-semibold py-2 px-3 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:text-[#19426C] transition-colors ${
-                      isActive ? 'bg-blue-50 dark:bg-blue-900/40 text-[#19426C] dark:text-amber-400 font-bold' : 'text-[#1E293B] dark:text-slate-200'
+                    `text-base font-semibold py-2 px-3 rounded-xl hover:bg-blue-50 dark:hover:bg-slate-800 transition-colors ${
+                      isActive ? 'bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-cyan-400 font-bold' : 'text-slate-800 dark:text-slate-200'
                     }`
                   }
                 >
@@ -149,7 +165,7 @@ export default function Navbar() {
               ))}
               <div className="pt-3 border-t border-slate-200 dark:border-slate-800">
                 <Link to="/contact" onClick={() => setIsOpen(false)} className="w-full block">
-                  <button className="w-full bg-white dark:bg-slate-900 border border-[#CBD5E1] dark:border-slate-700 text-[#0F172A] dark:text-white font-bold rounded-full py-3 text-center hover:bg-slate-50 dark:hover:bg-slate-800 shadow-sm transition-all">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl py-3 text-center shadow-sm transition-all">
                     Register
                   </button>
                 </Link>
