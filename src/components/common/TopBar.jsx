@@ -67,23 +67,28 @@ export default function TopBar() {
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 flex items-center justify-between gap-2 py-1.5 sm:py-2">
 
-        {/* Left: Contact Details — phone always visible, email hidden on mobile */}
-        <div className="flex items-center gap-3 sm:gap-5 min-w-0">
+        {/* Left: Contact Details */}
+        <div className="flex items-center gap-2 sm:gap-5 min-w-0">
           <a
             href="tel:+918436963334"
             className="flex items-center gap-1 sm:gap-1.5 hover:text-cyan-400 transition-colors whitespace-nowrap"
           >
             <Phone size={10} className="shrink-0" />
-            {/* Show short number on mobile, full on sm+ */}
-            <span className="sm:hidden">+91 84369 63334</span>
-            <span className="hidden sm:inline">+91 84369 63334</span>
+            <span>+91 84369 63334</span>
           </a>
+
+          {/* Divider */}
+          <span className="text-slate-600 hidden xs:inline">|</span>
+
+          {/* Email: icon only on mobile, full text on md+ */}
           <a
             href="mailto:algorithmtechsolutions@gmail.com"
-            className="hidden md:flex items-center gap-1.5 hover:text-cyan-400 transition-colors whitespace-nowrap"
+            className="flex items-center gap-1 sm:gap-1.5 hover:text-cyan-400 transition-colors"
+            title="algorithmtechsolutions@gmail.com"
           >
             <Mail size={10} className="shrink-0" />
-            <span>algorithmtechsolutions@gmail.com</span>
+            {/* Icon only on mobile */}
+            <span className="hidden md:inline whitespace-nowrap">algorithmtechsolutions@gmail.com</span>
           </a>
         </div>
 
