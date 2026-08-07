@@ -10,12 +10,10 @@ export default function Navbar() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     if (typeof window !== 'undefined') {
       const savedTheme = localStorage.getItem('theme')
-      if (savedTheme) {
-        return savedTheme === 'dark'
-      }
-      return window.matchMedia('(prefers-color-scheme: dark)').matches
+      // Only go dark if user explicitly chose dark before
+      return savedTheme === 'dark'
     }
-    return false
+    return false // default: light mode
   })
 
   useEffect(() => {
@@ -55,7 +53,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`transition-all duration-300 ${
         scrolled
           ? 'bg-white/90 dark:bg-[#0F172A]/90 backdrop-blur-md border-b border-slate-200/90 dark:border-slate-800/80 py-2.5 shadow-xs'
           : 'bg-white dark:bg-[#0F172A] py-3.5'

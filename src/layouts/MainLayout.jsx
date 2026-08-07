@@ -3,14 +3,19 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLocation } from 'react-router-dom'
 import Navbar from '@/components/common/Navbar'
 import Footer from '@/components/common/Footer'
+import TopBar from '@/components/common/TopBar'
 
 export default function MainLayout({ children }) {
   const location = useLocation()
 
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-300 bg-grid-glow relative">
-      <Navbar />
-      
+      {/* Sticky header wrapper: TopBar + Navbar both fixed at top on scroll */}
+      <div className="sticky top-0 z-50">
+        <TopBar />
+        <Navbar />
+      </div>
+
       <main className="flex-grow">
         <AnimatePresence mode="wait">
           <motion.div
