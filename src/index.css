@@ -158,3 +158,12 @@
 .glow-hover:hover {
   box-shadow: 0 0 25px -5px rgba(25, 66, 108, 0.25), 0 0 15px -5px rgba(223, 134, 0, 0.2);
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% - 1.5rem)); }
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}

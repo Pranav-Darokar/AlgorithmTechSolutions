@@ -26,7 +26,7 @@ import { testimonials } from '@/data/testimonials'
 import { faqs } from '@/data/faq'
 
 import CampusGallery from '@/components/common/CampusGallery'
-import instituteFrontImg from '@/assets/campus/institute_front.jpg'
+import bannerImg from '@/assets/campus/banner.png'
 import awsPartnerImg from '@/assets/partners/aws.png'
 import oraclePartnerImg from '@/assets/partners/oracle.png'
 import nvidiaPartnerImg from '@/assets/partners/nvidia.jpg'
@@ -178,48 +178,50 @@ export default function Home() {
       {/* 2. ABOUT INSTITUTE SECTION */}
       <section className="py-8">
         <Container>
-          <motion.div {...fadeInUp} className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <motion.div {...fadeInUp} className="flex flex-col gap-12 items-center">
 
-            {/* Left Image block */}
-            <div className="lg:col-span-5 relative">
-              <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-secondary rounded-2xl filter blur-xl opacity-30 -z-10" />
+            {/* Top Image block */}
+            <div className="w-full max-w-5xl relative">
+              <div className="absolute -inset-2 bg-gradient-to-tr from-primary to-secondary rounded-2xl filter blur-xl opacity-20 -z-10" />
               <img
-                src={instituteFrontImg}
-                alt="AlgorithmTech Corporate Training Institute Center Pune"
-                className="w-full h-72 sm:h-96 object-cover object-top rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800"
+                src={bannerImg}
+                alt="AlgorithmTech Corporate Training Institute Banner"
+                className="w-full h-auto object-contain rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 bg-white"
               />
             </div>
 
-            {/* Right Content Block */}
-            <div className="lg:col-span-7 space-y-6">
-              <SectionTitle
-                badge="About Algorithm Tech Solutions"
-                title="Pioneering Corporate Training in Next-Gen IT Fields"
-                align="left"
-              />
-              <p className="text-base text-muted-foreground leading-relaxed">
+            {/* Bottom Content Block */}
+            <div className="w-full max-w-4xl space-y-6 text-center">
+              <div className="flex flex-col items-center">
+                <SectionTitle
+                  badge="About Algorithm Tech Solutions"
+                  title="Pioneering Corporate Training in Next-Gen IT Fields"
+                  align="center"
+                />
+              </div>
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
                 Algorithm Tech Solutions was founded with a clear vision: to bridge the gap between academic education and modern enterprise requirements. We offer specialized syllabus in high-value subfields of Software Engineering and AI Operations.
               </p>
 
-              <div className="grid sm:grid-cols-2 gap-4 pt-2">
+              <div className="grid sm:grid-cols-2 gap-8 pt-4 text-left bg-card/50 p-6 rounded-2xl border border-border/50">
                 <div className="space-y-2">
-                  <h4 className="font-bold flex items-center gap-2 text-primary">
-                    <CheckCircle2 size={16} className="text-secondary shrink-0" /> Our Mission
+                  <h4 className="font-bold flex items-center gap-2 text-primary text-lg">
+                    <CheckCircle2 size={20} className="text-secondary shrink-0" /> Our Mission
                   </h4>
-                  <p className="text-sm text-muted-foreground">To equip students with verified practical skills that translate directly into industrial job performance.</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">To equip students with verified practical skills that translate directly into industrial job performance.</p>
                 </div>
                 <div className="space-y-2">
-                  <h4 className="font-bold flex items-center gap-2 text-primary">
-                    <CheckCircle2 size={16} className="text-secondary shrink-0" /> Our Vision
+                  <h4 className="font-bold flex items-center gap-2 text-primary text-lg">
+                    <CheckCircle2 size={20} className="text-secondary shrink-0" /> Our Vision
                   </h4>
-                  <p className="text-sm text-muted-foreground">To build India's premier corporate training node trusted by top-tier IT companies and engineers.</p>
+                  <p className="text-sm sm:text-base text-muted-foreground">To build India's premier corporate training node trusted by top-tier IT companies and engineers.</p>
                 </div>
               </div>
 
-              <div className="pt-4">
+              <div className="pt-6">
                 <Link to="/about">
-                  <Button variant="outline" className="gap-2">
-                    Read Full Story <ChevronRight size={16} />
+                  <Button variant="outline" size="lg" className="gap-2">
+                    Read Full Story <ChevronRight size={18} />
                   </Button>
                 </Link>
               </div>
@@ -334,15 +336,39 @@ export default function Home() {
             <h4 className="text-center font-display font-semibold text-sm uppercase tracking-wider text-muted-foreground/80">
               Our Certified Students are Hired by
             </h4>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center justify-items-center opacity-70">
-              {hiringPartners.map((partner) => (
-                <div
-                  key={partner.name}
-                  className="bg-card px-6 py-4.5 border rounded-lg hover:opacity-100 hover:border-primary/40 hover:shadow-sm transition-all duration-200 text-center w-full font-display font-bold text-sm tracking-widest text-muted-foreground"
-                >
-                  {partner.name}
-                </div>
-              ))}
+            <div className="relative flex overflow-hidden group gap-6 w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4">
+              <div className="flex animate-marquee shrink-0 gap-6 min-w-full items-center justify-around">
+                {hiringPartners.map((partner, idx) => (
+                  <div
+                    key={`${partner.name}-${idx}`}
+                    className="bg-white px-6 py-6 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex items-center justify-center w-[240px] h-28 shrink-0 group/card"
+                    title={partner.name}
+                  >
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name} 
+                      className="max-h-16 max-w-full object-contain transition-all duration-300 group-hover/card:scale-110 drop-shadow-sm" 
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className="flex animate-marquee shrink-0 gap-6 min-w-full items-center justify-around" aria-hidden="true">
+                {hiringPartners.map((partner, idx) => (
+                  <div
+                    key={`${partner.name}-dup-${idx}`}
+                    className="bg-white px-6 py-6 border border-slate-200 dark:border-slate-800 rounded-xl hover:border-primary/50 hover:shadow-lg transition-all duration-300 flex items-center justify-center w-[240px] h-28 shrink-0 group/card"
+                    title={partner.name}
+                  >
+                    <img 
+                      src={partner.logo} 
+                      alt={partner.name} 
+                      className="max-h-16 max-w-full object-contain transition-all duration-300 group-hover/card:scale-110 drop-shadow-sm" 
+                      loading="lazy"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 

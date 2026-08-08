@@ -7,12 +7,12 @@ export const placementStats = [
 ]
 
 export const hiringPartners = [
-  { name: "TCS", logo: "TCS" },
-  { name: "Infosys", logo: "Infosys" },
-  { name: "Wipro", logo: "Wipro" },
-  { name: "Cognizant", logo: "Cognizant" },
-  { name: "Accenture", logo: "Accenture" },
-  { name: "Capgemini", logo: "Capgemini" }
+  { name: "TCS", logo: "/partners/tcs.png" },
+  { name: "Infosys", logo: "/partners/infosys.png" },
+  { name: "Wipro", logo: "/partners/wipro.png" },
+  { name: "Cognizant", logo: "/partners/cognizant.png" },
+  { name: "Accenture", logo: "/partners/accenture.png" },
+  { name: "Capgemini", logo: "/partners/capgemini.png" }
 ]
 
 export const techPartners = [

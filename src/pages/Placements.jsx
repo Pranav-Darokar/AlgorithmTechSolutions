@@ -123,15 +123,39 @@ export default function Placements() {
             subtitle="We are partnered with major service and product corporations scheduling monthly recruitment campaigns."
           />
 
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-6 justify-items-center">
-            {hiringPartners.map((partner) => (
-              <div 
-                key={partner.name}
-                className="bg-card/60 px-6 py-5 border rounded-xl flex items-center justify-center font-display font-extrabold text-lg text-muted-foreground/80 w-full text-center hover:border-primary hover:text-primary transition-all duration-200"
-              >
-                {partner.name}
-              </div>
-            ))}
+          <div className="relative flex overflow-hidden group gap-6 w-full [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] py-4">
+            <div className="flex animate-marquee shrink-0 gap-6 min-w-full items-center justify-around">
+              {hiringPartners.map((partner, idx) => (
+                <div 
+                  key={`${partner.name}-${idx}`}
+                  className="bg-white px-8 py-8 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-center justify-center w-[280px] h-32 shadow-sm hover:shadow-lg hover:border-primary/50 transition-all duration-300 shrink-0 group/card"
+                  title={partner.name}
+                >
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name} 
+                    className="max-h-20 max-w-full object-contain transition-all duration-300 group-hover/card:scale-110 drop-shadow-sm" 
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
+            <div className="flex animate-marquee shrink-0 gap-6 min-w-full items-center justify-around" aria-hidden="true">
+              {hiringPartners.map((partner, idx) => (
+                <div 
+                  key={`${partner.name}-dup-${idx}`}
+                  className="bg-white px-8 py-8 border border-slate-200 dark:border-slate-800 rounded-2xl flex items-center justify-center w-[280px] h-32 shadow-sm hover:shadow-lg hover:border-primary/50 transition-all duration-300 shrink-0 group/card"
+                  title={partner.name}
+                >
+                  <img 
+                    src={partner.logo} 
+                    alt={partner.name} 
+                    className="max-h-20 max-w-full object-contain transition-all duration-300 group-hover/card:scale-110 drop-shadow-sm" 
+                    loading="lazy"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
