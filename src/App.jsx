@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import MainLayout from './layouts/MainLayout'
 import ScrollToTop from './components/common/ScrollToTop'
+import WhatsAppWidget from './components/common/WhatsAppWidget'
 
 // Lazy load page components for split bundles and fast initial loading
 const Home = React.lazy(() => import('./pages/Home'))
@@ -42,6 +43,7 @@ function App() {
             <Route path="/register" element={<Register />} />
           </Routes>
         </Suspense>
+        <WhatsAppWidget />
       </MainLayout>
     </Router>
   )

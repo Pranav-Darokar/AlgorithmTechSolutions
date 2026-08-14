@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container'
 import { Card, CardContent } from '@/components/ui/Card'
 import SectionTitle from '@/components/common/SectionTitle'
 import CampusGallery from '@/components/common/CampusGallery'
+import SEO from '@/components/common/SEO'
 import aboutHeroClassroomImg from '@/assets/campus/about_hero_classroom.jpg'
 
 export default function About() {
@@ -24,6 +25,10 @@ export default function About() {
 
   return (
     <div className="py-16 space-y-24">
+      <SEO 
+        title="About Us" 
+        description="Learn more about AlgorithmTech Solutions. We empower students with industry-relevant IT skills, hands-on projects, and 100% placement support."
+      />
       
       {/* Introduction Hero */}
       <section>

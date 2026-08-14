@@ -17,6 +17,7 @@ import CourseCard from '@/components/common/CourseCard'
 import MentorCard from '@/components/common/MentorCard'
 import TestimonialCard from '@/components/common/TestimonialCard'
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/Accordion'
+import SEO from '@/components/common/SEO'
 
 // Import data
 import { courses } from '@/data/courses'
@@ -69,6 +70,11 @@ export default function Home() {
 
   return (
     <div className="space-y-12 md:space-y-16 pb-12">
+      <SEO 
+        title="Best IT Training Institute in Pune" 
+        description="AlgorithmTech offers premium offline and online IT training courses in AI, Prompt Engineering, App Development, Data Analytics, and more. 100% placement assistance in Pune."
+        keywords="AlgorithmTech, IT Training Pune, AI courses, Data Science courses, Best coding institute, Software Testing courses Pune"
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-[#F0F9FF] dark:bg-[#0B132B] py-8 lg:py-12 flex items-center transition-colors">

@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button'
 import { Input, Textarea } from '@/components/ui/Input'
 import { Card, CardContent } from '@/components/ui/Card'
 import SectionTitle from '@/components/common/SectionTitle'
+import SEO from '@/components/common/SEO'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -89,6 +90,10 @@ export default function Contact() {
 
   return (
     <div className="py-16 space-y-20">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with AlgorithmTech Solutions. Visit our Pune campus or contact us online for course admissions and inquiries."
+      />
       
       {/* Intro Header */}
       <Container>

@@ -6,6 +6,7 @@ import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent } from '@/components/ui/Card'
 import SectionTitle from '@/components/common/SectionTitle'
+import SEO from '@/components/common/SEO'
 import { placementStats, hiringPartners, successStories, placementProcess } from '@/data/placements'
 
 export default function Placements() {
@@ -63,8 +64,11 @@ export default function Placements() {
   );
 
   return (
-    <div className="pb-16 pt-4 space-y-24">
-
+    <div className="py-16 space-y-20 overflow-hidden relative">
+      <SEO 
+        title="Placements & Success Stories" 
+        description="See our top performing students placed in top MNCs with high packages. AlgorithmTech provides 100% placement support."
+      />
 
       {/* Success Stories Grid */}
       <section className="bg-slate-50/50 dark:bg-transparent pb-16 pt-12">

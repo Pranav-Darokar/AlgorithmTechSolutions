@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/Input'
 import { Button } from '@/components/ui/Button'
 import SectionTitle from '@/components/common/SectionTitle'
 import CourseCard from '@/components/common/CourseCard'
+import SEO from '@/components/common/SEO'
 import { courses } from '@/data/courses'
 
 export default function Courses() {
@@ -38,6 +39,10 @@ export default function Courses() {
 
   return (
     <div className="py-16 space-y-12">
+      <SEO 
+        title="Our Courses" 
+        description="Browse high-value IT training courses in Software Testing, Full Stack Development, AI, and Agentic AI at AlgorithmTech."
+      />
       
       {/* Header Title */}
       <Container>
