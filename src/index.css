@@ -165,5 +165,14 @@
 }
 
 .animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee-right-seamless {
+  0% { transform: translateX(calc(-50% - 0.75rem)); }
+  100% { transform: translateX(0); }
+}
+
+.animate-marquee-reverse-seamless {
+  animation: marquee-right-seamless 30s linear infinite;
 }

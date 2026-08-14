@@ -65,7 +65,7 @@ export default function Navbar() {
           <img
             src={logoImg}
             alt="AlgorithmTech Logo"
-            className="w-10 h-10 object-contain rounded-lg group-hover:scale-105 transition-transform duration-200"
+            className="w-10 h-10 object-contain rounded-full group-hover:scale-105 transition-transform duration-200"
           />
           <span className="font-display font-black text-xl sm:text-2xl tracking-tight text-[#0F172A] dark:text-white">
             Algorithm<span className="text-blue-600 dark:text-cyan-400">Tech</span>
@@ -111,7 +111,7 @@ export default function Navbar() {
           >
             {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-700" />}
           </button>
-          <Link to="/contact">
+          <Link to="/register">
             <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl px-5 py-2 text-sm shadow-sm transition-all hover:scale-[1.02] cursor-pointer">
               Register
             </button>
@@ -162,7 +162,7 @@ export default function Navbar() {
                 </NavLink>
               ))}
               <div className="pt-3 border-t border-slate-200 dark:border-slate-800">
-                <Link to="/contact" onClick={() => setIsOpen(false)} className="w-full block">
+                <Link to="/register" onClick={() => setIsOpen(false)} className="w-full block">
                   <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl py-3 text-center shadow-sm transition-all">
                     Register
                   </button>

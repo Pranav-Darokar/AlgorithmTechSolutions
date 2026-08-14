@@ -93,6 +93,44 @@ export const courses = [
       { module: "Module 3: Hardware Interfacing & DAQmx", topics: ["Data Acquisition (DAQmx) basics", "Analog/Digital input/output configurations", "Serial communication protocols (RS232/GPIB)"] },
       { module: "Module 4: Design Patterns & Systems Calibration", topics: ["State Machine design layouts", "Producer-Consumer buffer architectures", "Error handling, debugging, and executable generation"] }
     ]
+  },
+  {
+    id: "android-ios-development",
+    name: "Android and iOS Development",
+    iconName: "Smartphone",
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800&h=450",
+    shortDescription: "Master mobile application development for both Android and iOS platforms.",
+    duration: "16 Weeks",
+    learningMode: "Hybrid (Online/Offline)",
+    skillLevel: "Intermediate",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Learn to build native and cross-platform mobile applications. This course covers everything from basic UI design to advanced state management, native API integration, and app store deployment strategies for both Apple and Google ecosystems.",
+    syllabus: [
+      { module: "Module 1: Mobile UI/UX Fundamentals", topics: ["Responsive layouts", "Navigation patterns", "Mobile design guidelines"] },
+      { module: "Module 2: Cross-Platform Frameworks", topics: ["React Native / Flutter basics", "State management", "Component lifecycle"] },
+      { module: "Module 3: Native Device APIs", topics: ["Camera & Storage access", "Geolocation & Maps", "Push Notifications"] },
+      { module: "Module 4: Testing & Deployment", topics: ["App profiling and performance", "Play Store deployment", "App Store submission"] }
+    ]
+  },
+  {
+    id: "agentic-ai",
+    name: "Agentic AI",
+    iconName: "BrainCircuit",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=450",
+    shortDescription: "Build autonomous AI agents capable of reasoning, planning, and executing complex tasks.",
+    duration: "8 Weeks",
+    learningMode: "Hybrid (Online/Offline)",
+    skillLevel: "Advanced",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Dive into the cutting-edge field of Agentic AI. Learn how to architect systems where LLMs act as autonomous agents, utilizing tools, memory, and sequential reasoning to solve multi-step problems without human intervention.",
+    syllabus: [
+      { module: "Module 1: Foundations of Agentic AI", topics: ["Evolution from chatbots to agents", "Core components of an AI Agent", "Reasoning and planning paradigms (ReAct)"] },
+      { module: "Module 2: Tool Use and APIs", topics: ["Function calling with LLMs", "Connecting agents to external databases", "Web scraping and search tools"] },
+      { module: "Module 3: Memory and Context Management", topics: ["Short-term vs Long-term memory", "Vector databases (Pinecone, Chroma)", "Context window optimization"] },
+      { module: "Module 4: Multi-Agent Systems", topics: ["Agent orchestration frameworks", "Collaborative agent workflows", "Evaluation and safety guardrails"] }
+    ]
   }
 ];
 

@@ -34,7 +34,7 @@ export default function Footer() {
             <img
               src={logoImg}
               alt="Algorithm Tech Solutions Logo"
-              className="w-10 h-10 object-contain rounded-lg"
+              className="w-10 h-10 object-contain rounded-full"
             />
             <div className="flex flex-col leading-none">
               <span className="font-display font-extrabold text-xl tracking-tight text-foreground">

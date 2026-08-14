@@ -24,31 +24,157 @@ export const techPartners = [
 
 export const successStories = [
   {
-    id: "story-1",
-    name: "Rohan Mane",
+    id: "story-16",
+    name: "Sipra Patra",
     course: "Software Testing",
-    company: "Cognizant",
-    package: "6.5 LPA",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=150&h=150",
-    quote: "The practical automation testing scripts and mock interviews helped me crack the Cognizant technical rounds. Highly recommend Algorithm Tech!"
+    city: "Odisha",
+    package: "16 LPA",
+    photo: "/students/SipraPatr.jpeg",
+    quote: "Successfully placed in the Software Testing domain with a package of 16 LPA."
   },
   {
-    id: "story-2",
-    name: "Shreya Joshi",
-    course: "App Development",
-    company: "Accenture",
-    package: "8.2 LPA",
-    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
-    quote: "Building a fully functional React Native portfolio app during the training course gave me huge confidence during my technical interview at Accenture."
+    id: "story-11",
+    name: "Amit Raut",
+    course: "AI Analyst/ LLM Practice",
+    city: "Washim",
+    package: "4.8 LPA",
+    photo: "/students/Amit Raut.jpeg",
+    quote: "Successfully placed in the AI Analyst/ LLM Practice domain from Washim."
   },
   {
-    id: "story-3",
-    name: "Akash Deshmukh",
-    course: "Prompt Engineering",
-    company: "TCS",
-    package: "7.0 LPA",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150&h=150",
-    quote: "Understanding prompt templates and zero-shot optimization helped me transition from a content team to an AI enablement lead role inside TCS."
+    id: "story-17",
+    name: "Abhishek Jadhav",
+    course: "Software Testing",
+    city: "Latur",
+    package: "11.5 LPA",
+    photo: "/students/Abhishek Jadhav.jpeg",
+    quote: "Successfully placed in the Software Testing domain with a package of 11.5 LPA."
+  },
+  {
+    id: "story-20",
+    name: "Prachi Maske",
+    course: "AI Analyst/ LLM",
+    city: "Washim",
+    package: "4.8 LPA",
+    photo: "/students/Prachi Maske .jpeg",
+    quote: "Successfully placed in the AI Analyst/ LLM domain from Washim."
+  },
+  {
+    id: "story-4",
+    name: "Supriya Patil",
+    course: "Software Testing",
+    city: "Dharashiv",
+    package: "3.4 LPA",
+    photo: "/students/Supriya_Patil.jpeg",
+    quote: "Successfully placed in the Software Testing domain with a package of 3.4 LPA."
+  },
+  {
+    id: "story-18",
+    name: "Vaishnavi Kulkarni",
+    course: "Software Testing",
+    city: "Beed",
+    package: "9 LPA",
+    photo: "/students/Vaishnavi Kulkarni.jpeg",
+    quote: "Successfully placed in the Software Testing domain with a package of 9 LPA."
+  },
+  {
+    id: "story-13",
+    name: "Sanket Khune",
+    course: "AI Testing",
+    city: "Dharashiv",
+    package: "2.8 LPA",
+    photo: "/students/Sanket Khune .jpeg",
+    quote: "Successfully placed in the AI Testing domain from Dharashiv."
+  },
+  {
+    id: "story-19",
+    name: "Vaibhav Deshmukh",
+    course: "Software Testing",
+    city: "Buldhana",
+    package: "6 LPA",
+    photo: "/students/Vaibhav Deshmukh.jpeg",
+    quote: "Successfully placed in the Software Testing domain with a package of 6 LPA."
+  },
+  {
+    id: "story-5",
+    name: "Bhagyashri Garad",
+    course: "Software Testing",
+    city: "Pune",
+    package: "3.4 LPA",
+    photo: "/students/Bhagyashri_Garad.jpg",
+    quote: "Successfully placed in the Software Testing domain from Pune."
+  },
+  {
+    id: "story-6",
+    name: "Rewati Naskare",
+    course: "Software Testing",
+    city: "Nagpur",
+    package: "3.4 LPA",
+    photo: "/students/Rewati_Naskare.jpg",
+    quote: "Successfully placed in the Software Testing domain from Nagpur."
+  },
+  {
+    id: "story-12",
+    name: "Vaibhav Bhandurge",
+    course: "AI Analyst/ LLM",
+    city: "Washim",
+    package: "4.8 LPA",
+    photo: "/students/Vaibhav Bhandurge.jpeg",
+    quote: "Successfully placed in the AI Analyst/ LLM domain from Washim."
+  },
+  {
+    id: "story-7",
+    name: "Aditya Bolbhat",
+    course: "Software Testing",
+    city: "Ahilyanagar",
+    package: "3.4 LPA",
+    photo: "/students/Aditya_Bolbhat .jpeg",
+    quote: "Successfully placed in the Software Testing domain from Ahilyanagar."
+  },
+  {
+    id: "story-14",
+    name: "Shivani Atagaonkar",
+    course: "QA",
+    city: "Amravati",
+    package: "3.5 LPA",
+    photo: "/students/Shivani Atagaonkar.jpeg",
+    quote: "Successfully placed in the QA domain from Amravati."
+  },
+  {
+    id: "story-8",
+    name: "Vaishanavi Inamdar",
+    course: "Software Testing",
+    city: "Kolhapur",
+    package: "3.4 LPA",
+    photo: "/students/Vaishanavi_Inamdar .jpeg",
+    quote: "Successfully placed in the Software Testing domain from Kolhapur."
+  },
+  {
+    id: "story-15",
+    name: "Nitin Lahare",
+    course: "AI Testing",
+    city: "Ahilyanagar",
+    package: "2.8 LPA",
+    photo: "/students/Nitin Lahare.jpeg",
+    quote: "Successfully placed in the AI Testing domain from Ahilyanagar."
+  },
+  {
+    id: "story-9",
+    name: "Shreyas Dhabale",
+    course: "Software Testing",
+    city: "Nagpur",
+    package: "3.4 LPA",
+    photo: "/students/Shreyas_Dhabale.jpg",
+    quote: "Successfully placed in the Software Testing domain from Nagpur."
+  },
+  {
+    id: "story-10",
+    name: "Sahil Khanande",
+    course: "Software Testing",
+    city: "Amravati",
+    package: "3.4 LPA",
+    photo: "/students/Sahil Khanande.jpeg",
+    quote: "Successfully placed in the Software Testing domain from Amravati."
   }
 ]
 
