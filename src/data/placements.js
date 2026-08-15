@@ -36,7 +36,7 @@ export const successStories = [
     course: "AI Testing",
     city: "Latur",
     package: "2.8 LPA",
-    photo: "/students/Mayuri_Lohakare.jpg",
+    photo: "/students/Mayuri Lohakare.jpeg",
     quote: "Successfully placed in the AI Testing domain from Latur."
   },
   {

@@ -20,11 +20,11 @@ export default function SuccessStoriesMarquee({ singleRow = false }) {
   const renderCard = (story) => (
     <Card className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[16px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
       {/* Photo */}
-      <div className="aspect-[5/4] w-full overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
+      <div className="aspect-square w-full overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
         <img
           src={story.photo}
           alt={story.name}
-          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
         />
       </div>
