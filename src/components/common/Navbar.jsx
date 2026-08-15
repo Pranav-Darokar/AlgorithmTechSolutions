@@ -112,7 +112,7 @@ export default function Navbar() {
             {isDarkMode ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} className="text-slate-700" />}
           </button>
           <Link to="/register">
-            <button className="bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-white font-bold rounded-xl px-6 py-2.5 text-base shadow-md transition-all hover:scale-[1.02] cursor-pointer">
+            <button className="bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-white font-bold rounded-xl px-5 py-2 text-sm shadow-md transition-all hover:scale-[1.02] cursor-pointer">
               Register
             </button>
           </Link>
@@ -163,7 +163,7 @@ export default function Navbar() {
               ))}
               <div className="pt-3 border-t border-slate-200 dark:border-slate-800">
                 <Link to="/register" onClick={() => setIsOpen(false)} className="w-full block">
-                  <button className="w-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-white font-bold rounded-xl py-3.5 text-lg text-center shadow-md transition-all">
+                  <button className="w-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-white font-bold rounded-xl py-2.5 text-base text-center shadow-md transition-all">
                     Register
                   </button>
                 </Link>
