@@ -1,18 +1,25 @@
 export const placementStats = [
-  { label: "Students Trained", value: "3,500+" },
-  { label: "Students Placed", value: "2,900+" },
-  { label: "Placement Rate", value: "93%" },
-  { label: "Highest Package", value: "14.5 LPA" },
-  { label: "Average Package", value: "5.2 LPA" }
+  { label: "Students Trained", value: 3500, suffix: "+" },
+  { label: "Students Placed", value: 2900, suffix: "+" },
+  { label: "Placement Rate", value: 93, suffix: "%" },
+  { label: "Highest Package", value: 16, suffix: " LPA" },
+  { label: "Average Package", value: 5.2, suffix: " LPA", decimals: 1 }
 ]
 
 export const hiringPartners = [
   { name: "TCS", logo: "/partners/tcs.png" },
+  { name: "Axis Bank", logo: "/partners/axis-bank.png" },
   { name: "Infosys", logo: "/partners/infosys.png" },
+  { name: "Synechron", logo: "/partners/synechron.png" },
   { name: "Wipro", logo: "/partners/wipro.png" },
+  { name: "Globant", logo: "/partners/globant.png" },
   { name: "Cognizant", logo: "/partners/cognizant.png" },
+  { name: "Siemens", logo: "/partners/siemens.png" },
   { name: "Accenture", logo: "/partners/accenture.png" },
-  { name: "Capgemini", logo: "/partners/capgemini.png" }
+  { name: "Yes Bank", logo: "/partners/yes-bank.png" },
+  { name: "Capgemini", logo: "/partners/capgemini.png" },
+  { name: "AU Small Finance Bank", logo: "/partners/au-bank.png" },
+  { name: "Aditya Birla Group", logo: "/partners/aditya-birla.png" }
 ]
 
 export const techPartners = [

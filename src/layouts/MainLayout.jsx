@@ -9,7 +9,7 @@ export default function MainLayout({ children }) {
   const location = useLocation()
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-300 bg-grid-glow relative">
+    <div className="min-h-screen bg-background text-foreground flex flex-col transition-colors duration-300 relative">
       {/* Sticky header wrapper: TopBar + Navbar both fixed at top on scroll */}
       <div className="sticky top-0 z-50">
         <TopBar />

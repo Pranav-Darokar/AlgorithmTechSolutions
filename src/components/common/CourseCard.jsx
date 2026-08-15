@@ -4,7 +4,7 @@ import * as Icons from 'lucide-react'
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 
-export default function CourseCard({ course }) {
+export default function CourseCard({ course, compact = false }) {
   const {
     id,
     name,
@@ -24,7 +24,7 @@ export default function CourseCard({ course }) {
     <Card interactive={true} className="flex flex-col h-full bg-card/60 backdrop-blur-sm border border-border/60 overflow-hidden group">
       {/* Course Banner Image */}
       {image && (
-        <div className="relative h-44 w-full overflow-hidden bg-slate-900">
+        <div className={`relative ${compact ? 'h-24' : 'h-44'} w-full overflow-hidden bg-slate-900`}>
           <img
             src={image}
             alt={name}
@@ -45,7 +45,7 @@ export default function CourseCard({ course }) {
         </div>
       )}
 
-      <CardHeader className="relative pb-3">
+      <CardHeader className={`relative ${compact ? 'p-4 pb-2' : 'pb-3'}`}>
         {!image && (
           <div className="flex justify-between items-start gap-4">
             <div className="bg-primary/10 text-primary p-3 rounded-xl border border-primary/20">
@@ -61,7 +61,7 @@ export default function CourseCard({ course }) {
             </div>
           </div>
         )}
-        <CardTitle className={`${image ? 'mt-1' : 'mt-4'} text-xl font-bold font-display`}>{name}</CardTitle>
+        <CardTitle className={`${image ? 'mt-1' : 'mt-4'} ${compact ? 'text-lg leading-tight' : 'text-xl'} font-bold font-display`}>{name}</CardTitle>
         <CardDescription className="text-xs text-muted-foreground mt-1 flex items-center justify-between">
           <span>Mode: {learningMode}</span>
           {image && (
@@ -72,8 +72,8 @@ export default function CourseCard({ course }) {
         </CardDescription>
       </CardHeader>
       
-      <CardContent className="flex-grow pb-4">
-        <p className="text-sm text-muted-foreground leading-relaxed">
+      <CardContent className={`flex-grow ${compact ? 'p-4 pt-0 pb-3' : 'pb-4'}`}>
+        <p className={`text-muted-foreground ${compact ? 'text-[13px] leading-snug line-clamp-2' : 'text-sm leading-relaxed'}`}>
           {shortDescription}
         </p>
 
@@ -91,14 +91,14 @@ export default function CourseCard({ course }) {
         </div>
       </CardContent>
 
-      <CardFooter className="grid grid-cols-2 gap-3 border-t pt-4">
+      <CardFooter className={`grid grid-cols-2 gap-3 border-t ${compact ? 'p-4 pt-3' : 'pt-4'}`}>
         <Link to={`/courses/${id}`} className="w-full">
-          <Button variant="outline" size="sm" className="w-full text-xs h-9">
+          <Button variant="outline" size="sm" className={`w-full ${compact ? 'text-[11px] h-8' : 'text-xs h-9'}`}>
             Learn More
           </Button>
         </Link>
         <Link to="/contact" className="w-full">
-          <Button variant="gradient" size="sm" className="w-full text-xs h-9">
+          <Button variant="gradient" size="sm" className={`w-full ${compact ? 'text-[11px] h-8' : 'text-xs h-9'}`}>
             Enroll Now
           </Button>
         </Link>

@@ -51,7 +51,7 @@
 
 @layer base {
 :root {
-  --background: 204 100% 98%; /* Soft Ice Blue #F0F9FF */
+  --background: 0 0% 100%; /* Pure White */
   --foreground: 222.2 84% 4.9%; /* Deep Navy Text #0F172A */
 
   --card: 0 0% 100%;
@@ -134,18 +134,7 @@
   @apply bg-clip-text text-transparent bg-gradient-to-r from-[#DF8600] via-[#E48C06] to-[#1B62A9];
 }
 
-.bg-grid-glow {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(25, 66, 108, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(25, 66, 108, 0.06) 1px, transparent 1px);
-}
 
-.dark .bg-grid-glow {
-  background-image: 
-    linear-gradient(to right, rgba(27, 98, 169, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(27, 98, 169, 0.05) 1px, transparent 1px);
-}
 
 .glass-card {
   @apply bg-white/90 dark:bg-card/40 backdrop-blur-md border border-blue-100/80 dark:border-border/50 shadow-lg;

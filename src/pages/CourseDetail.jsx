@@ -63,7 +63,7 @@ export default function CourseDetail() {
     <div className="pb-24">
       {/* 1. HERO BANNER */}
       <section className="relative overflow-hidden bg-card border-b py-12 md:py-16">
-        <div className="absolute inset-0 bg-grid-glow pointer-events-none" />
+
         <Container className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-4">
             <Link to="/courses" className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline">

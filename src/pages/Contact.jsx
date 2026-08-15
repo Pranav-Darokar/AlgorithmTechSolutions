@@ -1,69 +1,14 @@
-import React, { useState } from 'react'
-import { MapPin, Phone, Mail, Clock, MessageSquare, Send, CheckCircle2 } from 'lucide-react'
+import React from 'react'
+import { MapPin, Phone, Mail, Clock, MessageSquare } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
-import { Input, Textarea } from '@/components/ui/Input'
 import { Card, CardContent } from '@/components/ui/Card'
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/Accordion'
 import SectionTitle from '@/components/common/SectionTitle'
 import SEO from '@/components/common/SEO'
+import { faqs } from '@/data/faq'
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    course: 'data-annotation',
-    message: ''
-  })
-  const [errors, setErrors] = useState({})
-  const [submitted, setSubmitted] = useState(false)
-
-  // Validate form
-  const validateForm = () => {
-    const tempErrors = {}
-    if (!formData.name.trim()) tempErrors.name = 'Full Name is required'
-    
-    if (!formData.email.trim()) {
-      tempErrors.email = 'Email address is required'
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      tempErrors.email = 'Please input a valid email'
-    }
-
-    if (!formData.phone.trim()) {
-      tempErrors.phone = 'Phone number is required'
-    } else if (!/^\+?[\d\s-]{10,13}$/.test(formData.phone)) {
-      tempErrors.phone = 'Please input a valid 10-digit number'
-    }
-
-    if (!formData.message.trim()) tempErrors.message = 'Please input a message'
-
-    setErrors(tempErrors)
-    return Object.keys(tempErrors).length === 0
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    if (validateForm()) {
-      // Simulate API submit
-      setSubmitted(true)
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        course: 'data-annotation',
-        message: ''
-      })
-      setTimeout(() => setSubmitted(false), 5000)
-    }
-  }
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
-
   const contactDetails = [
     {
       title: "Our Address",
@@ -95,158 +40,144 @@ export default function Contact() {
         description="Get in touch with AlgorithmTech Solutions. Visit our Pune campus or contact us online for course admissions and inquiries."
       />
       
-      {/* Intro Header */}
-      <Container>
-        <SectionTitle
-          badge="Admissions Desk"
-          title="We're Here to Guide You"
-          subtitle="Get in touch with our career counselors to schedule a demo lab session, select a batch slot, or clear syllabus questions."
-        />
-      </Container>
-
-      {/* Main Form & Info Grid */}
+      {/* Contact Layout: Info + Form */}
       <section>
-        <Container className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
-          {/* Left Column: Contact Cards */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
-              {contactDetails.map((item) => {
-                const Icon = item.icon
-                return (
-                  <Card key={item.title} className="bg-card/60 backdrop-blur-sm border border-border/50">
-                    <CardContent className="p-6 flex gap-4">
-                      <div className="bg-primary/10 text-primary w-11 h-11 rounded-lg flex items-center justify-center border border-primary/20 shrink-0">
-                        <Icon size={20} className="stroke-[2]" />
-                      </div>
-                      <div className="space-y-1">
-                        <h4 className="font-bold text-sm font-display text-foreground">{item.title}</h4>
-                        <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
-                        {item.descSecondary && (
-                          <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{item.descSecondary}</p>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                )
-              })}
-            </div>
-
-            {/* Quick WhatsApp chat prompt */}
-            <div className="p-6 bg-blue-500/10 border border-blue-500/25 rounded-2xl flex items-center justify-between gap-4">
-              <div className="space-y-1">
-                <h5 className="font-bold font-display text-[#19426C] dark:text-amber-400 text-sm">Need Instant Support?</h5>
-                <p className="text-xs text-muted-foreground">Chat with our counseling leads on WhatsApp.</p>
+        <Container>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            
+            {/* Left Column: Contact Info */}
+            <div className="space-y-8">
+              <SectionTitle
+                badge="Admissions Desk"
+                title="We're Here to Guide You"
+                subtitle="Get in touch with our career counselors to schedule a demo lab session, select a batch slot, or clear syllabus questions."
+                align="left"
+                className="mx-0"
+              />
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {contactDetails.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <Card key={item.title} className="bg-card/60 backdrop-blur-sm border border-border/50">
+                      <CardContent className="p-5 flex flex-col items-start gap-3 h-full">
+                        <div className="bg-primary/10 text-primary w-10 h-10 rounded-lg flex items-center justify-center border border-primary/20 shrink-0">
+                          <Icon size={20} className="stroke-[2]" />
+                        </div>
+                        <div className="space-y-1 text-left">
+                          <h4 className="font-bold text-sm font-display text-foreground">{item.title}</h4>
+                          <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                          {item.descSecondary && (
+                            <p className="text-xs text-muted-foreground leading-relaxed">{item.descSecondary}</p>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )
+                })}
               </div>
-              <a
-                href="https://wa.me/918436963334?text=Hi%2C%20I'm%20interested%20in%20IT%20Training%20courses%20at%20Algorithm%20Tech."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="bg-[#25D366] hover:bg-[#20ba5a] text-white gap-1.5 h-9 text-xs">
-                  <MessageSquare size={14} /> WhatsApp
-                </Button>
-              </a>
+
+              {/* Quick WhatsApp chat prompt */}
+              <div className="p-6 bg-blue-500/10 border border-blue-500/25 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <div className="space-y-1">
+                  <h5 className="font-bold font-display text-[#19426C] dark:text-amber-400 text-base">Need Instant Support?</h5>
+                  <p className="text-sm text-muted-foreground">Chat with our counseling leads directly.</p>
+                </div>
+                <a
+                  href="https://wa.me/918436963334?text=Hi%2C%20I'm%20interested%20in%20IT%20Training%20courses%20at%20Algorithm%20Tech."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto shrink-0"
+                >
+                  <Button className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba5a] text-white gap-2 h-11 px-5">
+                    <MessageSquare size={16} /> WhatsApp
+                  </Button>
+                </a>
+              </div>
             </div>
-          </div>
 
-          {/* Right Column: Contact Form */}
-          <div className="lg:col-span-7">
-            <Card className="bg-card/60 backdrop-blur-sm border border-border/60">
-              <CardContent className="p-8">
-                
-                {submitted ? (
-                  <div className="text-center py-12 space-y-4">
-                    <CheckCircle2 className="mx-auto text-[#DF8600] w-16 h-16 animate-bounce" />
-                    <h3 className="text-2xl font-bold font-display">Message Sent Successfully!</h3>
-                    <p className="text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
-                      Thank you for contacting us! Our counselor will review your selection and reach out on your mobile number within 2 hours.
-                    </p>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <Input
-                        label="Full Name"
-                        name="name"
-                        placeholder="E.g., Rahul Patil"
-                        value={formData.name}
-                        onChange={handleChange}
-                        error={errors.name}
-                      />
-                      <Input
-                        label="Email Address"
-                        name="email"
-                        type="email"
-                        placeholder="E.g., rahul@example.com"
-                        value={formData.email}
-                        onChange={handleChange}
-                        error={errors.email}
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <Input
-                        label="Phone Number"
-                        name="phone"
-                        placeholder="E.g., +91 9881150150"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        error={errors.phone}
-                      />
-                      
-                      {/* Course Selection dropdown */}
-                      <div className="space-y-1.5 w-full">
-                        <label className="text-sm font-medium font-display text-foreground/80">
-                          Course of Interest
-                        </label>
-                        <select
-                          name="course"
-                          value={formData.course}
-                          onChange={handleChange}
-                          className="flex h-11 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:border-transparent cursor-pointer transition-all duration-200"
-                        >
+            {/* Right Column: Contact Form */}
+            <div className="space-y-8">
+              <SectionTitle
+                badge="Get in Touch"
+                title="Send Us a Message"
+                subtitle="Fill out the form below and our team will get back to you within 24 hours."
+                align="left"
+                className="mx-0"
+              />
+              <Card className="bg-card/60 backdrop-blur-sm border border-border/50 shadow-lg">
+                <CardContent className="p-6 md:p-8">
+                  <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); alert('Thank you for reaching out! We will contact you soon.'); }}>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <div className="space-y-1.5 text-left">
+                        <label htmlFor="name" className="text-xs font-medium text-foreground">Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" required />
+                      </div>
+                      <div className="space-y-1.5 text-left">
+                        <label htmlFor="email" className="text-xs font-medium text-foreground">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" required />
+                      </div>
+                      <div className="space-y-1.5 text-left">
+                        <label htmlFor="phone" className="text-xs font-medium text-foreground">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+91 98765 43210" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" required />
+                      </div>
+                      <div className="space-y-1.5 text-left">
+                        <label htmlFor="course" className="text-xs font-medium text-foreground">Interested Course</label>
+                        <select id="course" className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" required>
+                          <option value="">Select a course...</option>
                           <option value="data-annotation">Data Annotation</option>
                           <option value="prompt-engineering">Prompt Engineering</option>
                           <option value="software-testing">Software Testing</option>
-                          <option value="app-development">App Development</option>
-                          <option value="labview">LabVIEW Training</option>
+                          <option value="python">Python Programming</option>
+                          <option value="other">Other Inquiry</option>
                         </select>
                       </div>
                     </div>
-
-                    <Textarea
-                      label="Your Message"
-                      name="message"
-                      placeholder="Type details about your batch preferences or tech background..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      error={errors.message}
-                    />
-
-                    <Button type="submit" variant="gradient" className="w-full gap-2">
-                      <Send size={16} /> Send Message
-                    </Button>
+                    <div className="space-y-1.5 text-left">
+                      <label htmlFor="message" className="text-xs font-medium text-foreground">Your Message</label>
+                      <textarea id="message" placeholder="How can we help you?" className="flex min-h-[100px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" required></textarea>
+                    </div>
+                    <Button type="submit" variant="gradient" className="w-full">Send Message</Button>
                   </form>
-                )}
+                </CardContent>
+              </Card>
+            </div>
 
-              </CardContent>
-            </Card>
           </div>
+        </Container>
+      </section>
 
+      {/* FAQ ACCORDION SECTION */}
+      <section className="py-8 md:py-12 bg-slate-50/50 dark:bg-transparent border-y">
+        <Container className="max-w-4xl space-y-8">
+          <SectionTitle
+            badge="Frequently Asked Questions"
+            title="Have Questions? We Have Answers"
+            subtitle="Find quick info about class timings, offline labs, placements, and syllabus details."
+            align="center"
+          />
+
+          <Accordion type="single" defaultValue="faq-0">
+            {faqs.map((faq, i) => (
+              <AccordionItem key={i} value={`faq-${i}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>{faq.answer}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </Container>
       </section>
 
       {/* Google Map Mock Placeholder */}
       <section>
-        <Container className="space-y-6">
+        <Container className="max-w-4xl space-y-6">
           <SectionTitle
             badge="Locate Us"
             title="Visit Our Training Campus"
             align="center"
           />
 
-          <Card className="overflow-hidden border border-border/60 shadow-lg relative group h-[450px]">
+          <Card className="overflow-hidden border border-border/60 shadow-lg relative group h-[350px]">
             {/* Live Google Map iframe */}
             <iframe
               title="AlgorithmTech Location Map"
