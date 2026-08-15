@@ -31,6 +31,15 @@ export const techPartners = [
 
 export const successStories = [
   {
+    id: "story-21",
+    name: "Mayuri Lohakare",
+    course: "AI Testing",
+    city: "Latur",
+    package: "2.8 LPA",
+    photo: "/students/Mayuri_Lohakare.jpg",
+    quote: "Successfully placed in the AI Testing domain from Latur."
+  },
+  {
     id: "story-16",
     name: "Sipra Patra",
     course: "Software Testing",

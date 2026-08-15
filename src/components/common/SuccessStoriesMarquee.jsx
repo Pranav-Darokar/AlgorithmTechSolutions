@@ -19,8 +19,8 @@ export default function SuccessStoriesMarquee({ singleRow = false }) {
 
   const renderCard = (story) => (
     <Card className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[16px] overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group flex flex-col h-full">
-      {/* Square Photo */}
-      <div className="aspect-square w-full overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
+      {/* Photo */}
+      <div className="aspect-[5/4] w-full overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
         <img
           src={story.photo}
           alt={story.name}
@@ -30,25 +30,25 @@ export default function SuccessStoriesMarquee({ singleRow = false }) {
       </div>
       
       {/* Details */}
-      <CardContent className="p-5 flex flex-col items-center text-center flex-grow">
-        <div className="flex-grow w-full flex flex-col items-center justify-start space-y-3">
+      <CardContent className="p-4 flex flex-col items-center text-center flex-grow">
+        <div className="flex-grow w-full flex flex-col items-center justify-start space-y-2.5">
           <div className="space-y-1 w-full">
-            <h5 className="font-display font-bold text-[17px] text-slate-900 dark:text-slate-100 leading-tight">
+            <h5 className="font-display font-bold text-[15px] text-slate-900 dark:text-slate-100 leading-tight">
               {story.name}
             </h5>
-            <div className="text-xs text-slate-500 dark:text-slate-400 flex items-center justify-center gap-1 font-medium">
-              <MapPin className="w-3.5 h-3.5 text-slate-400" />
+            <div className="text-[11px] text-slate-500 dark:text-slate-400 flex items-center justify-center gap-1 font-medium">
+              <MapPin className="w-3 h-3 text-slate-400" />
               {story.city ? story.city : story.company}
             </div>
           </div>
           <div className="w-full pb-2">
-            <span className="inline-block text-[11px] font-semibold px-2.5 py-1.5 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-100 dark:border-blue-800/50">
+            <span className="inline-block text-[10px] font-semibold px-2 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full border border-blue-100 dark:border-blue-800/50">
               {story.course}
             </span>
           </div>
         </div>
-        <div className="w-full pt-4 mt-auto border-t border-slate-100 dark:border-slate-800">
-          <div className="text-base font-extrabold text-[#DF8600] dark:text-amber-500">
+        <div className="w-full pt-3 mt-auto border-t border-slate-100 dark:border-slate-800">
+          <div className="text-sm font-extrabold text-[#DF8600] dark:text-amber-500">
             {story.package}
           </div>
         </div>
@@ -68,7 +68,7 @@ export default function SuccessStoriesMarquee({ singleRow = false }) {
               {[0, 1].map((arrIndex) => (
                 <div key={`r1-${arrIndex}`} className={`flex animate-marquee shrink-0 gap-6 min-w-full items-stretch ${arrIndex === 1 ? 'hidden sm:flex' : ''}`} style={singleRow ? { animationDuration: '70s' } : undefined} aria-hidden={arrIndex === 1}>
                   {displayRow1.map((story, i) => (
-                    <div key={`${story.id}-r1-${arrIndex}-${i}`} className="w-[220px] md:w-[250px] shrink-0">
+                    <div key={`${story.id}-r1-${arrIndex}-${i}`} className="w-[180px] md:w-[220px] shrink-0">
                       {renderCard(story)}
                     </div>
                   ))}
@@ -83,7 +83,7 @@ export default function SuccessStoriesMarquee({ singleRow = false }) {
               {[0, 1].map((arrIndex) => (
                 <React.Fragment key={`r2-frag-${arrIndex}`}>
                   {displayRow2.map((story, i) => (
-                    <div key={`${story.id}-r2-${arrIndex}-${i}`} className="w-[220px] md:w-[250px] shrink-0">
+                    <div key={`${story.id}-r2-${arrIndex}-${i}`} className="w-[180px] md:w-[220px] shrink-0">
                       {renderCard(story)}
                     </div>
                   ))}
