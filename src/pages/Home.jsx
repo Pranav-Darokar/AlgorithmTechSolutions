@@ -99,7 +99,7 @@ export default function Home() {
       />
 
       {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden flex items-center min-h-[75vh] md:min-h-[85vh] bg-slate-900">
+      <section className="relative overflow-hidden flex items-center py-20 md:py-28 lg:py-36 min-h-[500px] bg-slate-900">
 
         {/* Sliding Background Images */}
         <div className="absolute inset-0 z-0 w-full h-full">
