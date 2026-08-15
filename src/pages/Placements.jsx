@@ -13,20 +13,20 @@ import { placementStats, hiringPartners, placementProcess } from '@/data/placeme
 
 export default function Placements() {
   return (
-    <div className="pb-16 pt-4 md:pt-8 space-y-20 overflow-hidden relative">
+    <div className="pb-16 pt-0 space-y-16 overflow-hidden relative">
       <SEO 
         title="Placements & Success Stories" 
         description="See our top performing students placed in top MNCs with high packages. AlgorithmTech provides 100% placement support."
       />
 
       {/* Success Stories Grid */}
-      <section className="bg-slate-50/50 dark:bg-transparent pb-16 pt-2">
-        <Container className="space-y-10">
-          <div className="text-center space-y-4 max-w-2xl mx-auto mb-12">
+      <section className="bg-slate-50/50 dark:bg-transparent pb-12 pt-0">
+        <Container className="space-y-6">
+          <div className="text-center space-y-2 max-w-2xl mx-auto mb-6 mt-4">
             <h2 className="text-3xl md:text-4xl font-extrabold font-display tracking-tight text-foreground">
               Our Placement Success Stories
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-base">
               Meet our students who turned their skills into careers.
             </p>
           </div>
