@@ -50,10 +50,20 @@ export const courses = [
     placementAssistance: true,
     longDescription: "Become a professional QA Engineer. This comprehensive syllabus covers Manual QA core parameters, automated web testing using Selenium WebDriver with Java, API testing using Postman, database verification with SQL queries, and software lifecycle methods in Agile sprints.",
     syllabus: [
-      { module: "Module 1: Manual Testing Fundamentals", topics: ["SDLC and STLC lifecycles", "Test case design techniques & boundary values", "Defect reporting and JIRA integration"] },
-      { module: "Module 2: Databases & API Validation", topics: ["Relational databases & SQL queries (Select, Join, Group)", "API basics & HTTP request parameters", "Postman scripting, collections, and assertions"] },
-      { module: "Module 3: Web Automation with Selenium", topics: ["Java language essentials for Selenium", "Locators (XPath, CSS selectors)", "Handling dynamic web components & windows"] },
-      { module: "Module 4: QA Frameworks & DevOps CI/CD", topics: ["TestNG, Page Object Model (POM) layouts", "Maven build manager & Git workflows", "Jenkins setup for continuous test automation runs"] }
+      { module: "Module 1: Foundations of AI for Testers", topics: ["What is AI? – Overview & Real-world Relevance", "How AI Works – Data, Algorithms, and Learning Loop", "Key Components of AI: Machine Learning, Deep Learning, NLP, Computer Vision"] },
+      { module: "Module 2: Types of AI & Their Relevance in Testing", topics: ["Narrow AI vs General AI vs Super AI", "Reactive Machines vs Limited Memory vs Self-Aware AI", "Practical Use Cases for QA/Testers"] },
+      { module: "Module 3: Generative AI in QA", topics: ["What is GenAI? – Why It’s a Game Changer for Testers", "Applications in QA: Test Case Generation, Test Data Generation, Test Documentation", "Practical Hands-on Prompts (e.g. Generate negative test cases)"] },
+      { module: "Module 4: Prompt Engineering for Testers", topics: ["Types of Prompting: Zero-Shot, Few-Shot, Role-Based, Format-Guided", "Crafting Effective Prompts: Role + Task + Context + Constraints + Format", "Hands-on Labs: Writing test cases, Bug report optimization with AI"] },
+      { module: "Module 5: Agentic AI for Test Automation", topics: ["What is Agentic AI? (AI + LLM + Autonomy + Actions)", "Applications in QA: Self-Healing Test Automation, Smart Regression Testing", "Demo: How an AI Agent Automates Login Test Flow"] },
+      { module: "Module 6: Gen AI Across STLC", topics: ["Requirement Analysis and Test Planning with AI", "Test Case Design & Test Execution (Self-healing)", "Defect Reporting, RCA, and Test Closure with AI Insights"] },
+      { module: "Module 7: Advanced Prompt Engineering in QA", topics: ["Test Data Generation for Complex Scenarios", "API Testing with AI-generated Scripts (Postman, REST Assured)", "Automating Documentation (Strategy, Traceability Matrix)"] },
+      { module: "Manual Testing & STLC", topics: ["Intro to SDLC (Waterfall, Agile, etc.)", "Testing Types (Static, Dynamic, Functional, Non-Functional)", "Test Levels (Unit, Integration, System, Smoke, Sanity, Regression)"] },
+      { module: "Test Management & Defect Life Cycle", topics: ["STLC Phases & Test Management (Plan, Strategy, Cases)", "Defect Life Cycle (Priority, Severity, Triage)", "Live Project: Jira, Zypher Scale, Traceability Matrix, Reports"] },
+      { module: "Database Testing", topics: ["Intro to Database, ACID Properties, RDBMS", "SQL Basics (Create, Update, Delete, Insert, Select, Drop)", "Operators, Clauses, Keys & Joins (DDL, DQL, DCL)"] },
+      { module: "Playwright Automation", topics: ["Intro to Playwright, Setup, Configuration", "Hooks & Fixtures, Locators & Actions", "Framework & POM, Parallel testing, Reporting", "Cross-Platform & API Testing with Playwright"] },
+      { module: "Core & Advanced Java", topics: ["Java Basics, OOP (Classes, Inheritance, Polymorphism)", "Collections Framework & Exception Handling", "File Handling (Reading/Writing Excel for Test Data)"] },
+      { module: "Selenium WebDriver & TestNG", topics: ["WebDriver Architecture, HTML Locators, XPath", "Handling Dropdowns, Alerts, Waits, iFrames, Multiple Windows", "TestNG Annotations, Assertions, DataProvider, Parallel Execution"] },
+      { module: "API Testing", topics: ["Intro to APIs (Endpoints, Methods, Status Codes)", "Tools: Postman, Insomnia, Rest Assured", "Advanced: Authentication, Mocking, CI/CD Integration"] }
     ]
   },
   {
@@ -96,21 +106,29 @@ export const courses = [
   },
   {
     id: "android-ios-development",
-    name: "Android and iOS Development",
+    name: "Android and iOS App Development",
     iconName: "Smartphone",
     image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800&h=450",
-    shortDescription: "Master mobile application development for both Android and iOS platforms.",
-    duration: "16 Weeks",
+    shortDescription: "Master mobile application development using React Native for both Android and iOS platforms.",
+    duration: "12 Weeks",
     learningMode: "Hybrid (Online/Offline)",
     skillLevel: "Intermediate",
     certificateIncluded: true,
     placementAssistance: true,
-    longDescription: "Learn to build native and cross-platform mobile applications. This course covers everything from basic UI design to advanced state management, native API integration, and app store deployment strategies for both Apple and Google ecosystems.",
+    longDescription: "Become a professional React Native Developer. This comprehensive roadmap covers everything from JavaScript and React fundamentals to advanced topics like state management, API integration, device feature access, and Play Store deployment. Build cross-platform apps efficiently.",
     syllabus: [
-      { module: "Module 1: Mobile UI/UX Fundamentals", topics: ["Responsive layouts", "Navigation patterns", "Mobile design guidelines"] },
-      { module: "Module 2: Cross-Platform Frameworks", topics: ["React Native / Flutter basics", "State management", "Component lifecycle"] },
-      { module: "Module 3: Native Device APIs", topics: ["Camera & Storage access", "Geolocation & Maps", "Push Notifications"] },
-      { module: "Module 4: Testing & Deployment", topics: ["App profiling and performance", "Play Store deployment", "App Store submission"] }
+      { module: "Module 1: Programming Fundamentals", topics: ["JavaScript Basics (Variables, Data Types, Operators, Cond statements, Loops, Functions, Arrays, Objects)", "ES6 Features (Arrow Functions, Template Literals, Destructuring, Spread Operator, Rest Parameters, Promises, Async/Await)"] },
+      { module: "Module 2: React Fundamentals", topics: ["React Basics (Virtual DOM, JSX, Components, Props, State)", "React Hooks (useState, useEffect, useRef)", "Hands-on: Counter Application, To-Do Application"] },
+      { module: "Module 3: React Native Introduction", topics: ["Basics (What is React Native, Architecture, Setup Environment, Android Studio, Emulator)", "Core Components (View, Text, Image, ScrollView, FlatList, SectionList)", "Hands-on: Build Profile Screen"] },
+      { module: "Module 4: Styling and UI Development", topics: ["Styling (StyleSheet, Flexbox, Responsive Design)", "UI Components (Button, TextInput, TouchableOpacity, Modal, ActivityIndicator)", "Hands-on: Login Screen, Registration Screen"] },
+      { module: "Module 5: Navigation", topics: ["React Navigation (Stack, Tab, Drawer)", "Navigation Parameters (Passing Data Between Screens)", "Hands-on: Multi-Screen App"] },
+      { module: "Module 6: API Integration", topics: ["Networking (Fetch API, Axios)", "REST APIs (GET, POST, PUT, DELETE)", "JSON Handling", "Hands-on: User Management App"] },
+      { module: "Module 7: State Management", topics: ["Context API (Provider, Consumer)", "Redux Toolkit (Store, Reducers, Actions, Async Thunks)", "Hands-on: Shopping Cart App"] },
+      { module: "Module 8: Local Storage", topics: ["Storage (AsyncStorage, Secure Storage)", "Data Persistence", "Hands-on: Notes Application"] },
+      { module: "Module 9: Device Features", topics: ["Mobile Features (Camera, Gallery, Location, Permissions, Push Notifications)", "Hands-on: Photo Upload App", "Interview Questions on device access and permissions"] },
+      { module: "Module 10: Performance Optimization", topics: ["Optimization (Memoization, React.memo, useMemo, useCallback)", "Performance Best Practices (FlatList Optimization, Lazy Loading)"] },
+      { module: "Module 11: Testing & Debugging", topics: ["Testing (Jest, React Native Testing Library)", "Debugging (Flipper, Chrome Debugger)", "Hands-on: Unit Test Cases"] },
+      { module: "Module 12: Deployment & Final Project", topics: ["Build Generation (APK Generation, Android Bundle)", "Play Store Basics (Release Process, Signing APK)", "Final Project: Complete App (E-Commerce, Food Delivery, or Expense Tracker)"] }
     ]
   },
   {

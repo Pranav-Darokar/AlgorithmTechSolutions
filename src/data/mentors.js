@@ -16,14 +16,14 @@ export const mentors = [
     bio: "IIT Kharagpur Alumnus and Marketing Head with 6 years of experience in Marketing, AI Tools & Prompt Engineering. Serves as an Industry Mentor for Prompt Engineering courses.",
   },
   {
-    id: "santosh-kawale",
-    name: "Santosh Kawale",
+    id: "santosh-patil",
+    name: "Santosh Patil",
     photo: santoshPhoto,
     qualification: "Industry Professional",
     experience: "12 Years",
-    specialization: "Software Testing & Quality Assurance",
+    specialization: "Test Automation Engineer",
     skills: ["Software Testing", "Quality Assurance", "QA Leadership"],
-    bio: "Lead Engineer – QA at Globant with 12 years of core industry experience. Senior Industry Professional specializing in Software Testing & Quality Assurance.",
+    bio: "Test Automation Engineer with 12 years of core industry experience. Senior Industry Professional specializing in Software Testing & Quality Assurance.",
   },
   {
     id: "vaibhav-bhandurge",

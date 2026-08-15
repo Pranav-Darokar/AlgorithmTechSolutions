@@ -17,14 +17,14 @@ export default function Footer() {
     { name: 'Contact', path: '/contact' },
   ]
 
-  const courseLinks = courses.slice(0, 5).map(course => ({
+  const courseLinks = courses.map(course => ({
     name: course.name,
     path: `/courses/${course.id}`
   }))
 
   return (
     <footer className="bg-slate-950 text-white border-t border-slate-800 pt-16 pb-8">
-      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         
         {/* About Column */}
         <div className="space-y-4">
@@ -86,12 +86,12 @@ export default function Footer() {
         </div>
 
         {/* Courses Column */}
-        <div className="space-y-4">
-          <h4 className="font-display font-bold text-base tracking-tight text-white">Popular Courses</h4>
-          <ul className="space-y-2.5">
+        <div className="space-y-4 lg:col-span-2">
+          <h4 className="font-display font-bold text-base tracking-tight text-white">Our Courses</h4>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5 gap-x-4">
             {courseLinks.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-white/90 hover:text-sky-400 transition-colors duration-150">
+                <Link to={link.path} className="text-sm text-white/90 hover:text-sky-400 transition-colors duration-150 line-clamp-1" title={link.name}>
                   {link.name}
                 </Link>
               </li>
