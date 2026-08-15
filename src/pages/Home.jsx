@@ -204,17 +204,7 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Floating Expert Card (Hidden on Mobile) */}
-        <div className="hidden md:flex absolute bottom-10 right-10 z-30 items-center gap-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-[1.25rem] px-5 py-3.5 shadow-xl">
-          <div className="relative flex items-center justify-center w-10 h-10">
-            <User className="w-8 h-8 text-amber-400" strokeWidth={1.5} />
-            <Star className="w-4 h-4 text-amber-400 absolute -bottom-1 -right-1 fill-transparent stroke-amber-400" strokeWidth={2.5} />
-          </div>
-          <div>
-            <div className="text-white font-medium text-sm leading-snug">Learn From</div>
-            <div className="text-white font-medium text-sm leading-snug">Industry Experts</div>
-          </div>
-        </div>
+
       </section>
 
 
