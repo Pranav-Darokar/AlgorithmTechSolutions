@@ -11,12 +11,12 @@ export default function MentorCard({ mentor }) {
 
   return (
     <Card interactive={true} className="flex flex-col h-full bg-card/60 backdrop-blur-sm overflow-hidden border border-border/60">
-      <div className="relative h-56 w-full overflow-hidden bg-slate-900 flex items-center justify-center">
+      <div className="relative aspect-square w-full overflow-hidden bg-slate-900 flex items-center justify-center">
         {photo ? (
           <img
             src={photo}
             alt={name}
-            className="w-full h-full object-cover object-center transition-transform duration-300 hover:scale-105"
+            className="w-full h-full object-cover object-top transition-transform duration-300 hover:scale-105"
             loading="lazy"
           />
         ) : (
