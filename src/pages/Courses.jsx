@@ -19,7 +19,7 @@ export default function Courses() {
         <SectionTitle
           badge="IT Training Programs"
           title="Browse Our High-Value Courses"
-          subtitle="Acquire verified practical skills in Artificial Intelligence operations, software test automation, app developments, and LabVIEW graphical systems."
+          subtitle="Acquire verified practical skills in Software Testing, Full-Stack Web Development, Data Annotation, Artificial Intelligence, App Development, and DevOps."
         />
       </Container>
 
