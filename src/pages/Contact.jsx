@@ -17,7 +17,7 @@ export default function Contact() {
     },
     {
       title: "Direct Hotlines",
-      desc: "+91 84369 63334",
+      desc: "+91 76662 24323, +91 84369 63334",
       icon: Phone,
     },
     {

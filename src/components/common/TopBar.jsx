@@ -70,11 +70,11 @@ export default function TopBar() {
         {/* Left: Contact Details */}
         <div className="flex items-center gap-2 sm:gap-5 min-w-0">
           <a
-            href="tel:+918436963334"
+            href="tel:+917666224323"
             className="flex items-center gap-1 sm:gap-1.5 hover:text-cyan-400 transition-colors whitespace-nowrap"
           >
             <Phone size={10} className="shrink-0" />
-            <span>+91 84369 63334</span>
+            <span>+91 76662 24323, +91 84369 63334</span>
           </a>
 
           {/* Divider */}

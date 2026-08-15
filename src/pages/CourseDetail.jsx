@@ -286,7 +286,7 @@ export default function CourseDetail() {
               <div className="space-y-2 text-xs">
                 <a href="tel:+918436963334" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Phone size={14} className="text-primary shrink-0" />
-                  <span>+91 84369 63334</span>
+                  <span className="text-sm">+91 76662 24323, +91 84369 63334</span>
                 </a>
                 <a href="mailto:admissions@algorithmtech.in" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={14} className="text-primary shrink-0" />
