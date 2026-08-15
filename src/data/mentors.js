@@ -2,6 +2,7 @@ import umakantPhoto from '@/assets/mentors/umakant.jpg'
 import santoshPhoto from '@/assets/mentors/santosh.jpg'
 import vijayPhoto from '@/assets/mentors/vijay.jpg'
 import nodeSpecialistPhoto from '@/assets/mentors/node_specialist.jpg'
+import vaibhavPhoto from '@/assets/mentors/vaibhav.jpg'
 
 export const mentors = [
   {
@@ -27,7 +28,7 @@ export const mentors = [
   {
     id: "vaibhav-bhandurge",
     name: "Vaibhav Bhandurge",
-    photo: null,
+    photo: vaibhavPhoto,
     qualification: "Industry Expert",
     experience: "3 Years",
     specialization: "AI/LLM & Prompt Engineering",
