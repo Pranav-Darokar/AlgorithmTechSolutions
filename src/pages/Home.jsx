@@ -99,7 +99,7 @@ export default function Home() {
       />
 
       {/* 1. HERO SECTION */}
-      <section className="relative overflow-hidden flex items-center py-20 md:py-28 lg:py-36 min-h-[500px] bg-slate-900">
+      <section className="relative overflow-hidden flex items-center pb-12 md:pb-16 lg:pb-20 pt-4 md:pt-6 lg:pt-8 min-h-[500px] bg-slate-900">
 
         {/* Sliding Background Images */}
         <div className="absolute inset-0 z-0 w-full h-full">
@@ -122,7 +122,7 @@ export default function Home() {
 
 
         {/* Content Container */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full flex items-center h-full pt-12 md:pt-16 pb-12 md:pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full flex items-center h-full pt-2 md:pt-4 pb-12 md:pb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
