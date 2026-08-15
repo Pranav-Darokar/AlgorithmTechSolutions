@@ -77,7 +77,7 @@ export default function Footer() {
           <ul className="space-y-2.5">
             {quickLinks.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-white/90 hover:text-primary transition-colors duration-150">
+                <Link to={link.path} className="text-sm text-white/90 hover:text-sky-400 transition-colors duration-150">
                   {link.name}
                 </Link>
               </li>
@@ -91,7 +91,7 @@ export default function Footer() {
           <ul className="space-y-2.5">
             {courseLinks.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-white/90 hover:text-primary transition-colors duration-150">
+                <Link to={link.path} className="text-sm text-white/90 hover:text-sky-400 transition-colors duration-150">
                   {link.name}
                 </Link>
               </li>
@@ -109,7 +109,7 @@ export default function Footer() {
                 href="https://www.google.com/maps/place/18%C2%B029'06.1%22N+73%C2%B048'57.2%22E/@18.485034,73.8133044,17z/data=!3m1!4b1!4m4!3m3!8m2!3d18.485034!4d73.8158793?hl=en&entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-primary transition-colors duration-150"
+                className="hover:text-sky-400 transition-colors duration-150"
               >
                 AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune
               </a>
