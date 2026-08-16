@@ -67,9 +67,14 @@ export default function Navbar() {
             alt="AlgorithmTech Logo"
             className="w-10 h-10 object-contain rounded-full group-hover:scale-105 transition-transform duration-200"
           />
-          <span className="font-display font-black text-xl sm:text-2xl tracking-tight text-[#0F172A] dark:text-white">
-            Algorithm<span className="text-blue-600 dark:text-cyan-400">Tech</span>
-          </span>
+          <div className="flex flex-col leading-none">
+            <span className="font-display font-black text-xl sm:text-2xl tracking-tight text-[#0F172A] dark:text-white">
+              Algorithm<span className="text-blue-600 dark:text-[#38BDF8]">Tech</span>
+            </span>
+            <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.24em] text-blue-600 dark:text-[#38BDF8] uppercase mt-0.5">
+              IT Solutions
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Navigation */}

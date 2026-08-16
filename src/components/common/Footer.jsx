@@ -39,7 +39,7 @@ export default function Footer() {
                 AlgorithmTech
               </span>
               <span className="text-[10px] font-bold tracking-[0.24em] text-[#38BDF8] uppercase mt-0.5">
-                SOLUTIONS
+                IT SOLUTIONS
               </span>
             </div>
           </Link>
