@@ -32,10 +32,30 @@ import oraclePartnerImg from '@/assets/partners/oracle.png'
 import nvidiaPartnerImg from '@/assets/partners/nvidia.jpg'
 import bharatPgPartnerImg from '@/assets/partners/bharat_pg.jpg'
 import linkedinPartnerImg from '@/assets/partners/linkedin.png'
-
+import azurePartnerImg from '@/assets/partners/azure-old.svg'
+import googleCloudPartnerImg from '@/assets/partners/google_cloud.png'
 import userBg1 from '@/assets/bg_slides/presentation_bg.jpg'
 import userBg2 from '@/assets/bg_slides/slide1.jpg'
 import userBg3 from '@/assets/bg_slides/user_slide1.jpg'
+
+const allCertifications = [
+  { name: "AWS Certified Cloud Practitioner", path: "/certifications/AWS Certified Cloud Practitioner.png" },
+  { name: "AWS Certified Solution Architect", path: "/certifications/AWS Certified Solution Architect.png" },
+  { name: "AWS AI Practitioner Foundation", path: "/certifications/AWS AI Practionioner Foundation.png" },
+  { name: "AWS Solution Architect Professional", path: "/certifications/AWS Solution architect Profetional.png" },
+  { name: "Associate Cloud Engineer", path: "/certifications/Associate Cloud Engineer.png" },
+  { name: "Azure Administrator", path: "/certifications/Azure Administrator.png" },
+  { name: "Azure Developer Associate", path: "/certifications/Azure Developer associate.png" },
+  { name: "Azure Fundamentals", path: "/certifications/Azure Fundamentals (AZ-900).png" },
+  { name: "Cloud Digital Leader", path: "/certifications/Cloud Digital Leader,.png" },
+  { name: "GitHub Actions", path: "/certifications/Github Actions.png" },
+  { name: "GitHub Foundations", path: "/certifications/Github Foundations.png" },
+  { name: "NVIDIA-Certified Associate", path: "/certifications/NVIDIA-Certified Associate.png" },
+  { name: "Oracle Cloud Infrastructure", path: "/certifications/Oracle Cloud Infrastructure (OCI).png" },
+  { name: "Professional Cloud Architect", path: "/certifications/Professional Cloud Architect.png" },
+  { name: "Cisco CCNP Security", path: "/certifications/_cisco_ccnp_security.png" },
+  { name: "Cisco CCNA", path: "/certifications/ccna_600.png" },
+];
 
 // Animated Counter Component
 function CountUp({ end, suffix = "", duration = 2 }) {
@@ -48,8 +68,21 @@ function CountUp({ end, suffix = "", duration = 2 }) {
 
   useEffect(() => {
     if (isInView) {
-      const controls = animate(count, end, { duration: duration, ease: "easeOut" });
-      return controls.stop;
+      let controls = animate(count, end, { duration: duration, ease: "easeOut" });
+      
+      const interval = setInterval(() => {
+        if (controls && controls.stop) controls.stop();
+        count.set(0);
+        
+        setTimeout(() => {
+          controls = animate(count, end, { duration: duration, ease: "easeOut" });
+        }, 150);
+      }, 5000);
+
+      return () => {
+        clearInterval(interval);
+        if (controls && controls.stop) controls.stop();
+      };
     }
   }, [isInView, count, end, duration]);
 
@@ -196,7 +229,7 @@ export default function Home() {
               {/* Stat 3 */}
               <div className="flex flex-col items-center text-center space-y-1">
                 <div className="text-3xl sm:text-4xl font-extrabold text-amber-400 tracking-tight">
-                  <CountUp end={93} suffix="%" />
+                  <CountUp end={95} suffix="%" />
                 </div>
                 <div className="text-[11px] sm:text-xs font-bold text-white/70 uppercase tracking-wider">Placement Rate</div>
               </div>
@@ -241,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* 4.5 & 5. PLACED STUDENTS & HIRING PARTNERS */}
-      <section className="py-10 md:py-14 bg-slate-50/50 dark:bg-transparent border-y">
+      <section className="pt-10 md:pt-14 pb-2 bg-slate-50/50 dark:bg-transparent border-y">
         <Container className="space-y-12 md:space-y-16">
 
           {/* Placed Students Success */}
@@ -300,6 +333,29 @@ export default function Home() {
                 ))}
               </div>
             </div>
+            
+            <h4 className="text-center font-display font-bold uppercase tracking-wide pt-4">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500 text-xl md:text-2xl">
+                Certification Provided By Our Institute
+              </span>
+            </h4>
+
+            <div className="relative flex overflow-hidden group gap-8 sm:gap-16 w-full [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 mt-6">
+              <div className="flex animate-[marquee_30s_linear_infinite_reverse] shrink-0 gap-8 sm:gap-16 min-w-full items-center justify-around">
+                {allCertifications.map((cert, i) => (
+                  <div key={i} className="flex gap-8 sm:gap-16 shrink-0">
+                    <img src={cert.path} alt={cert.name} className="h-32 sm:h-44 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform shrink-0" />
+                  </div>
+                ))}
+              </div>
+              <div className="flex animate-[marquee_30s_linear_infinite_reverse] shrink-0 gap-8 sm:gap-16 min-w-full items-center justify-around" aria-hidden="true">
+                {allCertifications.map((cert, i) => (
+                  <div key={`${i}-dup`} className="flex gap-8 sm:gap-16 shrink-0">
+                    <img src={cert.path} alt={cert.name} className="h-32 sm:h-44 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform shrink-0" />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
         </Container>
@@ -347,7 +403,7 @@ export default function Home() {
             subtitle="Collaborating with global tech pioneers to deliver enterprise-grade syllabus and infrastructure."
           />
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 sm:gap-6 max-w-6xl mx-auto items-center">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6 max-w-7xl mx-auto items-center">
 
             {/* 1. AWS */}
             <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-4 sm:p-5 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-amber-400/60 transition-all duration-300 group h-24 sm:h-28">
@@ -386,11 +442,29 @@ export default function Home() {
             </div>
 
             {/* 5. LinkedIn */}
-            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-3 sm:p-4 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-blue-500/60 transition-all duration-300 group h-24 sm:h-28 col-span-2 md:col-span-1">
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-3 sm:p-4 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-blue-500/60 transition-all duration-300 group h-24 sm:h-28">
               <img
                 src={linkedinPartnerImg}
                 alt="LinkedIn Official Logo"
                 className="max-h-12 sm:max-h-14 w-auto object-contain group-hover:scale-105 transition-transform"
+              />
+            </div>
+
+            {/* 6. Azure */}
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-3 sm:p-4 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-blue-400/60 transition-all duration-300 group h-24 sm:h-28">
+              <img
+                src={azurePartnerImg}
+                alt="Microsoft Azure Logo"
+                className="max-h-16 sm:max-h-20 scale-125 w-auto object-contain group-hover:scale-150 transition-transform"
+              />
+            </div>
+
+            {/* 7. Google Cloud */}
+            <div className="bg-white dark:bg-[#1E293B] border border-slate-200/90 dark:border-slate-800 rounded-2xl p-3 sm:p-4 flex items-center justify-center shadow-xs hover:shadow-lg hover:border-red-400/60 transition-all duration-300 group h-24 sm:h-28">
+              <img
+                src={googleCloudPartnerImg}
+                alt="Google Cloud Logo"
+                className="max-h-16 sm:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform"
               />
             </div>
 

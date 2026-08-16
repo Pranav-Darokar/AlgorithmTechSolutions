@@ -1,7 +1,7 @@
 export const placementStats = [
   { label: "Students Trained", value: 3500, suffix: "+" },
   { label: "Students Placed", value: 2900, suffix: "+" },
-  { label: "Placement Rate", value: 93, suffix: "%" },
+  { label: "Placement Rate", value: 95, suffix: "%" },
   { label: "Highest Package", value: 16, suffix: " LPA" },
   { label: "Average Package", value: 5.2, suffix: " LPA", decimals: 1 }
 ]

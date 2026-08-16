@@ -24,7 +24,7 @@ export default function CourseCard({ course, compact = false }) {
     <Card interactive={true} className="flex flex-col h-full bg-card/60 backdrop-blur-sm border border-border/60 overflow-hidden group">
       {/* Course Banner Image */}
       {image && (
-        <div className={`relative ${compact ? 'h-24' : 'h-44'} w-full overflow-hidden bg-slate-900`}>
+        <div className={`relative ${compact ? 'h-36' : 'h-48'} w-full overflow-hidden bg-slate-900`}>
           <img
             src={image}
             alt={name}

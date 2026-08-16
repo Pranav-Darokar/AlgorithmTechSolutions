@@ -1,43 +1,5 @@
 export const courses = [
   {
-    id: "data-annotation",
-    name: "Data Annotation",
-    iconName: "Binary",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800&h=450",
-    shortDescription: "Learn image, text, audio and video annotation used in Artificial Intelligence and Machine Learning projects.",
-    duration: "4 Weeks",
-    learningMode: "Hybrid (Online/Offline)",
-    skillLevel: "Beginner Friendly",
-    certificateIncluded: true,
-    placementAssistance: true,
-    longDescription: "Data Annotation is the process of labeling data to make it usable for machine learning algorithms. In this course, you will learn hands-on image annotation, text bounding boxes, audio tagging, and video tracking methods using industry-standard labeling suites. Perfect for starting a career in the high-demand AI operations field.",
-    syllabus: [
-      { module: "Module 1: Introduction to AI & Data Labeling", topics: ["Overview of Machine Learning & Deep Learning workflows", "Types of annotation (Supervised vs Unsupervised)", "Familiarization with Annotation Tooling suites"] },
-      { module: "Module 2: Computer Vision Image Annotation", topics: ["Bounding box creation for object detection", "Polygons and keypoint labelling for facial recognition", "Semantic segmentation for autonomous vehicles"] },
-      { module: "Module 3: Natural Language & Audio Tagging", topics: ["Entity naming recognition (NER)", "Sentiment analysis categorization", "Audio file translation and soundwave classification"] },
-      { module: "Module 4: Video Annotation & Quality Control", topics: ["Object tracking across frames", "Dealing with occlusion and bounding box interpolations", "QA rules, compliance, and export metrics"] }
-    ]
-  },
-  {
-    id: "prompt-engineering",
-    name: "Prompt Engineering",
-    iconName: "Cpu",
-    image: "/courses/prompt_engineering.png",
-    shortDescription: "Learn how to write effective prompts for ChatGPT, Gemini, Claude and other Generative AI models.",
-    duration: "4 Weeks",
-    learningMode: "Online / Live Classes",
-    skillLevel: "All Levels",
-    certificateIncluded: true,
-    placementAssistance: true,
-    longDescription: "Unlock the full potential of Generative AI. This course covers advanced prompt writing strategies, zero-shot and few-shot learning techniques, prompt patterns, chain-of-thought methodologies, and integrating LLMs into automated business workflows to boost productivity.",
-    syllabus: [
-      { module: "Module 1: LLM Foundation & NLP Basics", topics: ["How Large Language Models (LLMs) operate", "Tokenization and context windows", "Understanding temperature and top-p generation parameters"] },
-      { module: "Module 2: Core Prompt Engineering Formats", topics: ["Directives, context, and output structures", "Zero-shot vs Few-shot learning prompts", "Role prompting and tone styling"] },
-      { module: "Module 3: Advanced Reasoning Prompt Patterns", topics: ["Chain-of-Thought (CoT) prompting", "Self-consistency and iterative feedback loops", "Prompt injection threats and guardrail defenses"] },
-      { module: "Module 4: Workflow Automation & Tooling", topics: ["Integrating LLMs with API pipelines", "Intro to LangChain and semantic lookups", "Building custom AI agents for business tasks"] }
-    ]
-  },
-  {
     id: "software-testing",
     name: "Software Testing",
     iconName: "ShieldCheck",
@@ -86,6 +48,63 @@ export const courses = [
     ]
   },
   {
+    id: "agentic-ai",
+    name: "Agentic AI",
+    iconName: "BrainCircuit",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=450",
+    shortDescription: "Build autonomous AI agents capable of reasoning, planning, and executing complex tasks.",
+    duration: "8 Weeks",
+    learningMode: "Hybrid (Online/Offline)",
+    skillLevel: "Advanced",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Dive into the cutting-edge field of Agentic AI. Learn how to architect systems where LLMs act as autonomous agents, utilizing tools, memory, and sequential reasoning to solve multi-step problems without human intervention.",
+    syllabus: [
+      { module: "Module 1: Foundations of Agentic AI", topics: ["Evolution from chatbots to agents", "Core components of an AI Agent", "Reasoning and planning paradigms (ReAct)"] },
+      { module: "Module 2: Tool Use and APIs", topics: ["Function calling with LLMs", "Connecting agents to external databases", "Web scraping and search tools"] },
+      { module: "Module 3: Memory and Context Management", topics: ["Short-term vs Long-term memory", "Vector databases (Pinecone, Chroma)", "Context window optimization"] },
+      { module: "Module 4: Multi-Agent Systems", topics: ["Agent orchestration frameworks", "Collaborative agent workflows", "Evaluation and safety guardrails"] }
+    ]
+  },
+  {
+    id: "prompt-engineering",
+    name: "Prompt Engineering",
+    iconName: "Cpu",
+    image: "/courses/prompt_engineering.png",
+    shortDescription: "Learn how to write effective prompts for ChatGPT, Gemini, Claude and other Generative AI models.",
+    duration: "4 Weeks",
+    learningMode: "Online / Live Classes",
+    skillLevel: "All Levels",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Unlock the full potential of Generative AI. This course covers advanced prompt writing strategies, zero-shot and few-shot learning techniques, prompt patterns, chain-of-thought methodologies, and integrating LLMs into automated business workflows to boost productivity.",
+    syllabus: [
+      { module: "Module 1: LLM Foundation & NLP Basics", topics: ["How Large Language Models (LLMs) operate", "Tokenization and context windows", "Understanding temperature and top-p generation parameters"] },
+      { module: "Module 2: Core Prompt Engineering Formats", topics: ["Directives, context, and output structures", "Zero-shot vs Few-shot learning prompts", "Role prompting and tone styling"] },
+      { module: "Module 3: Advanced Reasoning Prompt Patterns", topics: ["Chain-of-Thought (CoT) prompting", "Self-consistency and iterative feedback loops", "Prompt injection threats and guardrail defenses"] },
+      { module: "Module 4: Workflow Automation & Tooling", topics: ["Integrating LLMs with API pipelines", "Intro to LangChain and semantic lookups", "Building custom AI agents for business tasks"] }
+    ]
+  },
+  {
+    id: "devops-and-cloud",
+    name: "DevOps and Cloud",
+    iconName: "Cloud",
+    image: "/courses/devops_cloud.png",
+    shortDescription: "Master DevOps pipelines, CI/CD, AWS, Docker, Kubernetes, and cloud infrastructure.",
+    duration: "12 Weeks",
+    learningMode: "Hybrid (Online/Offline)",
+    skillLevel: "Intermediate",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Learn to bridge the gap between software development and IT operations. This course covers everything you need to become a DevOps engineer, including version control with Git, continuous integration and deployment with Jenkins, containerization with Docker and Kubernetes, and infrastructure as code using Terraform on AWS.",
+    syllabus: [
+      { module: "Module 1: Version Control & Linux Basics", topics: ["Linux command line essentials", "Git branching and merging strategies", "Bash scripting fundamentals"] },
+      { module: "Module 2: Cloud Computing with AWS", topics: ["EC2, S3, and IAM basics", "VPC networking and security groups", "Serverless architecture overview"] },
+      { module: "Module 3: Containerization & Orchestration", topics: ["Docker images and containers", "Docker Compose for multi-container apps", "Kubernetes pods, services, and deployments"] },
+      { module: "Module 4: CI/CD & Infrastructure as Code", topics: ["Jenkins pipeline creation", "GitHub Actions workflows", "Terraform configuration and provisioning"] }
+    ]
+  },
+  {
     id: "labview",
     name: "LabVIEW Training",
     iconName: "Terminal",
@@ -102,6 +121,25 @@ export const courses = [
       { module: "Module 2: Structures & Memory Management", topics: ["Case and Sequence structures", "Arrays and shift registers", "Creating custom SubVIs for modular code layouts"] },
       { module: "Module 3: Hardware Interfacing & DAQmx", topics: ["Data Acquisition (DAQmx) basics", "Analog/Digital input/output configurations", "Serial communication protocols (RS232/GPIB)"] },
       { module: "Module 4: Design Patterns & Systems Calibration", topics: ["State Machine design layouts", "Producer-Consumer buffer architectures", "Error handling, debugging, and executable generation"] }
+    ]
+  },
+  {
+    id: "data-annotation",
+    name: "Data Annotation",
+    iconName: "Binary",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800&h=450",
+    shortDescription: "Learn image, text, audio and video annotation used in Artificial Intelligence and Machine Learning projects.",
+    duration: "4 Weeks",
+    learningMode: "Hybrid (Online/Offline)",
+    skillLevel: "Beginner Friendly",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Data Annotation is the process of labeling data to make it usable for machine learning algorithms. In this course, you will learn hands-on image annotation, text bounding boxes, audio tagging, and video tracking methods using industry-standard labeling suites. Perfect for starting a career in the high-demand AI operations field.",
+    syllabus: [
+      { module: "Module 1: Introduction to AI & Data Labeling", topics: ["Overview of Machine Learning & Deep Learning workflows", "Types of annotation (Supervised vs Unsupervised)", "Familiarization with Annotation Tooling suites"] },
+      { module: "Module 2: Computer Vision Image Annotation", topics: ["Bounding box creation for object detection", "Polygons and keypoint labelling for facial recognition", "Semantic segmentation for autonomous vehicles"] },
+      { module: "Module 3: Natural Language & Audio Tagging", topics: ["Entity naming recognition (NER)", "Sentiment analysis categorization", "Audio file translation and soundwave classification"] },
+      { module: "Module 4: Video Annotation & Quality Control", topics: ["Object tracking across frames", "Dealing with occlusion and bounding box interpolations", "QA rules, compliance, and export metrics"] }
     ]
   },
   {
@@ -132,44 +170,6 @@ export const courses = [
     ]
   },
   {
-    id: "agentic-ai",
-    name: "Agentic AI",
-    iconName: "BrainCircuit",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800&h=450",
-    shortDescription: "Build autonomous AI agents capable of reasoning, planning, and executing complex tasks.",
-    duration: "8 Weeks",
-    learningMode: "Hybrid (Online/Offline)",
-    skillLevel: "Advanced",
-    certificateIncluded: true,
-    placementAssistance: true,
-    longDescription: "Dive into the cutting-edge field of Agentic AI. Learn how to architect systems where LLMs act as autonomous agents, utilizing tools, memory, and sequential reasoning to solve multi-step problems without human intervention.",
-    syllabus: [
-      { module: "Module 1: Foundations of Agentic AI", topics: ["Evolution from chatbots to agents", "Core components of an AI Agent", "Reasoning and planning paradigms (ReAct)"] },
-      { module: "Module 2: Tool Use and APIs", topics: ["Function calling with LLMs", "Connecting agents to external databases", "Web scraping and search tools"] },
-      { module: "Module 3: Memory and Context Management", topics: ["Short-term vs Long-term memory", "Vector databases (Pinecone, Chroma)", "Context window optimization"] },
-      { module: "Module 4: Multi-Agent Systems", topics: ["Agent orchestration frameworks", "Collaborative agent workflows", "Evaluation and safety guardrails"] }
-    ]
-  },
-  {
-    id: "devops-and-cloud",
-    name: "DevOps and Cloud",
-    iconName: "Cloud",
-    image: "/courses/devops_cloud.png",
-    shortDescription: "Master DevOps pipelines, CI/CD, AWS, Docker, Kubernetes, and cloud infrastructure.",
-    duration: "12 Weeks",
-    learningMode: "Hybrid (Online/Offline)",
-    skillLevel: "Intermediate",
-    certificateIncluded: true,
-    placementAssistance: true,
-    longDescription: "Learn to bridge the gap between software development and IT operations. This course covers everything you need to become a DevOps engineer, including version control with Git, continuous integration and deployment with Jenkins, containerization with Docker and Kubernetes, and infrastructure as code using Terraform on AWS.",
-    syllabus: [
-      { module: "Module 1: Version Control & Linux Basics", topics: ["Linux command line essentials", "Git branching and merging strategies", "Bash scripting fundamentals"] },
-      { module: "Module 2: Cloud Computing with AWS", topics: ["EC2, S3, and IAM basics", "VPC networking and security groups", "Serverless architecture overview"] },
-      { module: "Module 3: Containerization & Orchestration", topics: ["Docker images and containers", "Docker Compose for multi-container apps", "Kubernetes pods, services, and deployments"] },
-      { module: "Module 4: CI/CD & Infrastructure as Code", topics: ["Jenkins pipeline creation", "GitHub Actions workflows", "Terraform configuration and provisioning"] }
-    ]
-  },
-  {
     id: "mern-fullstack",
     name: "Full-Stack Web Dev with MERN",
     iconName: "Code",
@@ -186,25 +186,6 @@ export const courses = [
       { module: "Module 2: React.js Development", topics: ["React components, props, and state", "Hooks (useState, useEffect, useContext)", "React Router and API integration"] },
       { module: "Module 3: Back-End with Node.js & Express", topics: ["Node.js runtime and modules", "Creating RESTful APIs with Express", "Middleware and error handling"] },
       { module: "Module 4: Database & Deployment", topics: ["MongoDB schemas and Mongoose", "User authentication (JWT, bcrypt)", "Deploying MERN apps to Vercel and Render"] }
-    ]
-  },
-  {
-    id: "linux-administration",
-    name: "Linux Administration",
-    iconName: "Terminal",
-    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800&h=450",
-    shortDescription: "Master Linux operating system, command line, shell scripting, and server administration.",
-    duration: "8 Weeks",
-    learningMode: "Hybrid (Online/Offline)",
-    skillLevel: "Beginner to Intermediate",
-    certificateIncluded: true,
-    placementAssistance: true,
-    longDescription: "Gain a deep understanding of the Linux operating system. This course covers everything from basic command-line navigation and file management to advanced topics like user administration, network configuration, security hardening, and bash shell scripting. Perfect for aspiring sysadmins and DevOps professionals.",
-    syllabus: [
-      { module: "Module 1: Linux Fundamentals", topics: ["Introduction to Linux distributions", "Basic command-line navigation", "File and directory management"] },
-      { module: "Module 2: System Administration", topics: ["User and group management", "File permissions and ownership", "Process monitoring and management"] },
-      { module: "Module 3: Networking & Security", topics: ["Network configuration and troubleshooting", "Firewall setup (iptables/ufw)", "SSH configuration and security best practices"] },
-      { module: "Module 4: Shell Scripting", topics: ["Bash variables and control structures", "Automating administrative tasks", "Text processing (grep, awk, sed)"] }
     ]
   },
   {
@@ -243,6 +224,25 @@ export const courses = [
       { module: "Module 2: Object-Oriented Python", topics: ["Classes, objects, and inheritance", "Exception handling and regular expressions", "Working with APIs and JSON data"] },
       { module: "Module 3: Web Development with Django/Flask", topics: ["Setting up web servers and routing", "Templates and static files", "Database integration with ORM"] },
       { module: "Module 4: Data Analysis & Automation", topics: ["Web scraping with BeautifulSoup", "Data analysis with Pandas and NumPy", "Automating tasks and writing scripts"] }
+    ]
+  },
+  {
+    id: "linux-administration",
+    name: "Linux Administration",
+    iconName: "Terminal",
+    image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=800&h=450",
+    shortDescription: "Master Linux operating system, command line, shell scripting, and server administration.",
+    duration: "8 Weeks",
+    learningMode: "Hybrid (Online/Offline)",
+    skillLevel: "Beginner to Intermediate",
+    certificateIncluded: true,
+    placementAssistance: true,
+    longDescription: "Gain a deep understanding of the Linux operating system. This course covers everything from basic command-line navigation and file management to advanced topics like user administration, network configuration, security hardening, and bash shell scripting. Perfect for aspiring sysadmins and DevOps professionals.",
+    syllabus: [
+      { module: "Module 1: Linux Fundamentals", topics: ["Introduction to Linux distributions", "Basic command-line navigation", "File and directory management"] },
+      { module: "Module 2: System Administration", topics: ["User and group management", "File permissions and ownership", "Process monitoring and management"] },
+      { module: "Module 3: Networking & Security", topics: ["Network configuration and troubleshooting", "Firewall setup (iptables/ufw)", "SSH configuration and security best practices"] },
+      { module: "Module 4: Shell Scripting", topics: ["Bash variables and control structures", "Automating administrative tasks", "Text processing (grep, awk, sed)"] }
     ]
   }
 ];

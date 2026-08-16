@@ -14,6 +14,15 @@ export default function CountUpAnimation({ value, suffix = "", decimals = 0 }) {
   useEffect(() => {
     if (isInView) {
       springValue.set(value);
+      
+      const interval = setInterval(() => {
+        springValue.set(0);
+        setTimeout(() => {
+          springValue.set(value);
+        }, 150); // Small pause before recounting
+      }, 5000);
+      
+      return () => clearInterval(interval);
     }
   }, [isInView, value, springValue]);
 
