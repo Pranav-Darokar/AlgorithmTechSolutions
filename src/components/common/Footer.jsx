@@ -116,6 +116,17 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-start gap-2.5">
+              <MapPin size={18} className="text-sky-400 shrink-0 mt-0.5" />
+              <a
+                href="https://www.google.com/maps/search/Thakur+Coaching+Classes,+Near+Barshi+Road,+Shree+Nagar,+Latur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-sky-400 transition-colors duration-150"
+              >
+                Thakur Coaching Classes, Near Barshi Road, Shree Nagar, Latur
+              </a>
+            </li>
+            <li className="flex items-start gap-2.5">
               <Phone size={16} className="text-sky-400 shrink-0 mt-0.5" />
               <div className="flex flex-col text-sm space-y-1">
                 <span>+91 76662 24323</span>
