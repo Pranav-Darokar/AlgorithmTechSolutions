@@ -55,6 +55,7 @@ const allCertifications = [
   { name: "Professional Cloud Architect", path: "/certifications/Professional Cloud Architect.png" },
   { name: "Cisco CCNP Security", path: "/certifications/_cisco_ccnp_security.png" },
   { name: "Cisco CCNA", path: "/certifications/ccna_600.png" },
+  { name: "Claude Certified Architect", path: "/certifications/claude_certified_architect.png" },
 ];
 
 // Animated Counter Component
