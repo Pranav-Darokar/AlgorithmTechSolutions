@@ -4,7 +4,7 @@ import { motion, useInView, useMotionValue, useTransform, animate, AnimatePresen
 import {
   Users, Settings, FileCode, Briefcase, MessagesSquare,
   FileSpreadsheet, Clock, CreditCard, Compass, GraduationCap,
-  ArrowRight, Sparkles, CheckCircle2, ChevronRight, Phone, Check, User, Star,
+  ArrowRight, Sparkles, CheckCircle2, ChevronRight, Phone, Check, User, Star, Download,
   Cpu, Cloud, Terminal, Code2, Database, Layers, Server, ShieldCheck
 } from 'lucide-react'
 
@@ -179,7 +179,7 @@ export default function Home() {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 w-full sm:w-auto pt-2">
               <Link to="/courses" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-amber-500 text-neutral-950 hover:bg-amber-400 font-bold rounded-xl px-8 py-3.5 shadow-lg flex items-center justify-center transition-all text-sm md:text-base">
                   Explore Courses
@@ -190,6 +190,11 @@ export default function Home() {
                   Book Free Counselling
                 </button>
               </Link>
+              <a href="/brochure.pdf" download className="w-full sm:w-auto">
+                <button className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold rounded-xl px-8 py-3.5 hover:bg-white/20 shadow-sm transition-all text-sm md:text-base flex items-center justify-center gap-2">
+                  <Download size={18} /> Download Brochure
+                </button>
+              </a>
             </div>
 
             {/* Trust Points */}
