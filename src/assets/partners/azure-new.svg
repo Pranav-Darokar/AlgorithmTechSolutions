@@ -1,0 +1,10 @@
+<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(10, 30)">
+    <rect x="0" y="0" width="28" height="28" fill="#f35325"/>
+    <rect x="31" y="0" width="28" height="28" fill="#81bc06"/>
+    <rect x="0" y="31" width="28" height="28" fill="#05a6f0"/>
+    <rect x="31" y="31" width="28" height="28" fill="#ffba08"/>
+  </g>
+  <text x="80" y="52" font-family="'Segoe UI', -apple-system, Roboto, Arial, sans-serif" font-size="34" font-weight="600" fill="#5e5e5e">Microsoft</text>
+  <text x="80" y="88" font-family="'Segoe UI', -apple-system, Roboto, Arial, sans-serif" font-size="34" font-weight="600" fill="#5e5e5e">Azure</text>
+</svg>

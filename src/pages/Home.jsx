@@ -32,8 +32,8 @@ import oraclePartnerImg from '@/assets/partners/oracle.png'
 import nvidiaPartnerImg from '@/assets/partners/nvidia.jpg'
 import bharatPgPartnerImg from '@/assets/partners/bharat_pg.jpg'
 import linkedinPartnerImg from '@/assets/partners/linkedin.png'
-import azurePartnerImg from '@/assets/partners/azure-old.svg'
-import googleCloudPartnerImg from '@/assets/partners/google_cloud.png'
+import azurePartnerImg from '@/assets/partners/azure-new.svg'
+import googleCloudPartnerImg from '@/assets/partners/google-cloud-new.svg'
 import userBg1 from '@/assets/bg_slides/presentation_bg.jpg'
 import userBg2 from '@/assets/bg_slides/slide1.jpg'
 import userBg3 from '@/assets/bg_slides/user_slide1.jpg'
@@ -341,7 +341,7 @@ export default function Home() {
             
             <h4 className="text-center font-display font-bold uppercase tracking-wide pt-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500 text-xl md:text-2xl">
-                Certification Provided By Our Institute
+                Certifications Provided By Our Institute
               </span>
             </h4>
 
@@ -349,14 +349,14 @@ export default function Home() {
               <div className="flex animate-[marquee_30s_linear_infinite_reverse] shrink-0 gap-8 sm:gap-16 min-w-full items-center justify-around">
                 {allCertifications.map((cert, i) => (
                   <div key={i} className="flex gap-8 sm:gap-16 shrink-0">
-                    <img src={cert.path} alt={cert.name} className="h-32 sm:h-44 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform shrink-0" />
+                    <img src={cert.path} alt={cert.name} className={`w-auto object-contain drop-shadow-md hover:scale-105 transition-transform shrink-0 ${cert.name.includes('Cisco') ? 'h-24 sm:h-32' : 'h-32 sm:h-44'}`} />
                   </div>
                 ))}
               </div>
               <div className="flex animate-[marquee_30s_linear_infinite_reverse] shrink-0 gap-8 sm:gap-16 min-w-full items-center justify-around" aria-hidden="true">
                 {allCertifications.map((cert, i) => (
                   <div key={`${i}-dup`} className="flex gap-8 sm:gap-16 shrink-0">
-                    <img src={cert.path} alt={cert.name} className="h-32 sm:h-44 w-auto object-contain drop-shadow-md hover:scale-105 transition-transform shrink-0" />
+                    <img src={cert.path} alt={cert.name} className={`w-auto object-contain drop-shadow-md hover:scale-105 transition-transform shrink-0 ${cert.name.includes('Cisco') ? 'h-24 sm:h-32' : 'h-32 sm:h-44'}`} />
                   </div>
                 ))}
               </div>
@@ -405,7 +405,7 @@ export default function Home() {
           <SectionTitle
             badge="Industry Alliances"
             title="Technology Partners"
-            subtitle="Collaborating with global tech pioneers to deliver enterprise-grade syllabus and infrastructure."
+            subtitle="Collaborating with global tech pioneers to deliver enterprise-grade syllabus and Infrastructure."
           />
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6 max-w-7xl mx-auto items-center">
@@ -460,7 +460,7 @@ export default function Home() {
               <img
                 src={azurePartnerImg}
                 alt="Microsoft Azure Logo"
-                className="max-h-16 sm:max-h-20 scale-125 w-auto object-contain group-hover:scale-150 transition-transform"
+                className="max-h-12 sm:max-h-14 w-auto object-contain group-hover:scale-105 transition-transform"
               />
             </div>
 
@@ -469,7 +469,7 @@ export default function Home() {
               <img
                 src={googleCloudPartnerImg}
                 alt="Google Cloud Logo"
-                className="max-h-16 sm:max-h-20 w-auto object-contain group-hover:scale-105 transition-transform"
+                className="max-h-12 sm:max-h-14 w-auto object-contain group-hover:scale-105 transition-transform"
               />
             </div>
 
