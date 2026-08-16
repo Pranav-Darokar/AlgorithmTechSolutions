@@ -105,26 +105,32 @@ export default function Footer() {
           <p className="font-bold text-white text-base whitespace-nowrap">Algorithm Tech IT Solutions Pvt. Ltd.</p>
           <ul className="space-y-3 text-sm text-white/90">
             <li className="flex items-start gap-2.5">
-              <MapPin size={18} className="text-sky-400 shrink-0 mt-0.5" />
-              <a
-                href="https://www.google.com/maps/place/18%C2%B029'06.1%22N+73%C2%B048'57.2%22E/@18.485034,73.8133044,17z/data=!3m1!4b1!4m4!3m3!8m2!3d18.485034!4d73.8158793?hl=en&entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-sky-400 transition-colors duration-150"
-              >
-                AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune
-              </a>
+              <MapPin size={18} className="text-sky-400 shrink-0 mt-1" />
+              <div className="flex flex-col">
+                <span className="font-semibold text-white">Pune Branch:</span>
+                <a
+                  href="https://www.google.com/maps/place/18%C2%B029'06.1%22N+73%C2%B048'57.2%22E/@18.485034,73.8133044,17z/data=!3m1!4b1!4m4!3m3!8m2!3d18.485034!4d73.8158793?hl=en&entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sky-400 transition-colors duration-150 mt-0.5"
+                >
+                  AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune
+                </a>
+              </div>
             </li>
             <li className="flex items-start gap-2.5">
-              <MapPin size={18} className="text-sky-400 shrink-0 mt-0.5" />
-              <a
-                href="https://www.google.com/maps/search/Thakur+Coaching+Classes,+Near+Barshi+Road,+Shree+Nagar,+Latur"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-sky-400 transition-colors duration-150"
-              >
-                Thakur Coaching Classes, Near Barshi Road, Shree Nagar, Latur
-              </a>
+              <MapPin size={18} className="text-sky-400 shrink-0 mt-1" />
+              <div className="flex flex-col">
+                <span className="font-semibold text-white">Latur Branch:</span>
+                <a
+                  href="https://www.google.com/maps/search/Thakur+Coaching+Classes,+Near+Barshi+Road,+Shree+Nagar,+Latur"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-sky-400 transition-colors duration-150 mt-0.5"
+                >
+                  Thakur Coaching Classes, Near Barshi Road, Shree Nagar, Latur
+                </a>
+              </div>
             </li>
             <li className="flex items-start gap-2.5">
               <Phone size={16} className="text-sky-400 shrink-0 mt-0.5" />
