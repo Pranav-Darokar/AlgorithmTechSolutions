@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Globe } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
@@ -125,6 +125,12 @@ export default function Footer() {
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-sky-400 shrink-0" />
               <span>admissions@algorithmtech.in</span>
+            </li>
+            <li className="flex items-center gap-2.5">
+              <Globe size={16} className="text-sky-400 shrink-0" />
+              <a href="https://www.algoitsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition-colors duration-150">
+                www.algoitsolutions.com
+              </a>
             </li>
           </ul>
 
