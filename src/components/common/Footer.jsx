@@ -23,7 +23,7 @@ export default function Footer() {
   }))
 
   return (
-    <footer className="bg-slate-950 text-white border-t border-slate-800 pt-12 pb-6">
+    <footer className="bg-slate-950 text-white border-t border-slate-800 pt-12 pb-6 selection:bg-sky-500/30 selection:text-white">
       <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
         
         {/* About Column */}
