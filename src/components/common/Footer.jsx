@@ -23,11 +23,11 @@ export default function Footer() {
   }))
 
   return (
-    <footer className="bg-slate-950 text-white border-t border-slate-800 pt-16 pb-8">
-      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+    <footer className="bg-slate-950 text-white border-t border-slate-800 pt-12 pb-6">
+      <Container className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
         
         {/* About Column */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:col-span-3">
           <Link to="/" className="flex items-center gap-2.5">
             <img
               src={logoImg}
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         {/* Quick Links Column */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:col-span-2">
           <h4 className="font-display font-bold text-base tracking-tight text-white">Quick Links</h4>
           <ul className="space-y-2.5">
             {quickLinks.map((link) => (
@@ -86,12 +86,12 @@ export default function Footer() {
         </div>
 
         {/* Courses Column */}
-        <div className="space-y-4 lg:col-span-2">
+        <div className="space-y-4 lg:col-span-4">
           <h4 className="font-display font-bold text-base tracking-tight text-white">Our Courses</h4>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-2.5 gap-x-4">
             {courseLinks.map((link) => (
               <li key={link.name}>
-                <Link to={link.path} className="text-sm text-white/90 hover:text-sky-400 transition-colors duration-150 line-clamp-1" title={link.name}>
+                <Link to={link.path} className="text-sm text-white/90 hover:text-sky-400 transition-colors duration-150" title={link.name}>
                   {link.name}
                 </Link>
               </li>
@@ -100,12 +100,12 @@ export default function Footer() {
         </div>
 
         {/* Contact & Newsletter Column */}
-        <div className="space-y-4">
+        <div className="space-y-4 lg:col-span-3">
           <h4 className="font-display font-bold text-base tracking-tight text-white">Contact Info</h4>
-          <p className="font-bold text-white text-base whitespace-nowrap">Algorithm Tech IT Solutions</p>
+          <p className="font-bold text-white text-base whitespace-nowrap">Algorithm Tech IT Solutions Pvt. Ltd.</p>
           <ul className="space-y-3 text-sm text-white/90">
             <li className="flex items-start gap-2.5">
-              <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
+              <MapPin size={18} className="text-sky-400 shrink-0 mt-0.5" />
               <a
                 href="https://www.google.com/maps/place/18%C2%B029'06.1%22N+73%C2%B048'57.2%22E/@18.485034,73.8133044,17z/data=!3m1!4b1!4m4!3m3!8m2!3d18.485034!4d73.8158793?hl=en&entry=ttu&g_ep=EgoyMDI2MDgwMi4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
@@ -116,14 +116,14 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-start gap-2.5">
-              <Phone size={16} className="text-primary shrink-0 mt-0.5" />
+              <Phone size={16} className="text-sky-400 shrink-0 mt-0.5" />
               <div className="flex flex-col text-sm space-y-1">
                 <span>+91 76662 24323</span>
                 <span>+91 84369 63334</span>
               </div>
             </li>
             <li className="flex items-center gap-2.5">
-              <Mail size={16} className="text-primary shrink-0" />
+              <Mail size={16} className="text-sky-400 shrink-0" />
               <span>admissions@algorithmtech.in</span>
             </li>
           </ul>
@@ -134,8 +134,8 @@ export default function Footer() {
       </Container>
       
       {/* Copyright Subfooter */}
-      <Container className="border-t border-slate-800 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70">
-        <p>&copy; {currentYear} Algorithm Tech Solutions. All rights reserved.</p>
+      <Container className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70">
+        <p>&copy; {currentYear} Algorithm Tech Solutions Pvt. Ltd. All rights reserved.</p>
         <div className="flex gap-4">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
