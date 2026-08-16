@@ -190,7 +190,7 @@ export default function Home() {
                   Book Free Counselling
                 </button>
               </Link>
-              <a href="/brochure.pdf" download className="w-full sm:w-auto">
+              <a href="/students/Browcher Algorithm Tech.pdf" download="AlgorithmTech_Brochure.pdf" className="w-full sm:w-auto">
                 <button className="w-full sm:w-auto bg-white/10 backdrop-blur-sm border border-white/20 text-white font-bold rounded-xl px-8 py-3.5 hover:bg-white/20 shadow-sm transition-all text-sm md:text-base flex items-center justify-center gap-2">
                   <Download size={18} /> Download Brochure
                 </button>
