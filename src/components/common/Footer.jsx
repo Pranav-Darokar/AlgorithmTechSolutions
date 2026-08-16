@@ -102,6 +102,7 @@ export default function Footer() {
         {/* Contact & Newsletter Column */}
         <div className="space-y-4">
           <h4 className="font-display font-bold text-base tracking-tight text-white">Contact Info</h4>
+          <p className="font-bold text-white text-base whitespace-nowrap">Algorithm Tech IT Solutions</p>
           <ul className="space-y-3 text-sm text-white/90">
             <li className="flex items-start gap-2.5">
               <MapPin size={18} className="text-primary shrink-0 mt-0.5" />
