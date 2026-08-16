@@ -114,7 +114,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-sky-400 transition-colors duration-150 mt-0.5"
                 >
-                  AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune
+                  AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune, Maharashtra – 411052
                 </a>
               </div>
             </li>
@@ -128,7 +128,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-sky-400 transition-colors duration-150 mt-0.5"
                 >
-                  Thakur Coaching Classes, Near Barshi Road, Shree Nagar, Latur
+                  Thakur Coaching Classes, Near Barshi Road, Shree Nagar, Latur, Maharashtra – 413512
                 </a>
               </div>
             </li>
