@@ -114,9 +114,12 @@ export default function Footer() {
                 AlgorithmTech Corporate Training Institute, Near Cummins Engineering College, Karve Nagar, Lane 1, Opposite Pentagon Tower, Pune
               </a>
             </li>
-            <li className="flex items-center gap-2.5">
-              <Phone size={16} className="text-primary shrink-0" />
-              <span className="text-sm">+91 76662 24323, +91 84369 63334</span>
+            <li className="flex items-start gap-2.5">
+              <Phone size={16} className="text-primary shrink-0 mt-0.5" />
+              <div className="flex flex-col text-sm space-y-1">
+                <span>+91 76662 24323</span>
+                <span>+91 84369 63334</span>
+              </div>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-primary shrink-0" />
