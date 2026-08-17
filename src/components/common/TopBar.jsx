@@ -82,13 +82,13 @@ export default function TopBar() {
 
           {/* Email: icon only on mobile, full text on md+ */}
           <a
-            href="mailto:algorithmtechsolutions@gmail.com"
+            href="mailto:contact@algoitsolutions.com"
             className="flex items-center gap-1 sm:gap-1.5 hover:text-cyan-400 transition-colors"
-            title="algorithmtechsolutions@gmail.com"
+            title="contact@algoitsolutions.com"
           >
             <Mail size={10} className="shrink-0" />
             {/* Icon only on mobile */}
-            <span className="hidden md:inline whitespace-nowrap">algorithmtechsolutions@gmail.com</span>
+            <span className="hidden md:inline whitespace-nowrap">contact@algoitsolutions.com</span>
           </a>
         </div>
 

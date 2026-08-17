@@ -141,7 +141,7 @@ export default function Register() {
                         label="Phone Number"
                         name="phone"
                         icon={Phone}
-                        placeholder="E.g., +91 9881150150"
+                        placeholder="+91 98765 43210"
                         value={formData.phone}
                         onChange={handleChange}
                         error={errors.phone}

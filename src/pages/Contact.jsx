@@ -22,8 +22,7 @@ export default function Contact() {
     },
     {
       title: "Email Support",
-      desc: "admissions@algorithmtech.in",
-      descSecondary: "support@algorithmtech.in",
+      desc: "contact@algoitsolutions.com",
       icon: Mail,
     },
     {

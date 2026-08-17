@@ -46,7 +46,7 @@ export default function About() {
               Empowering Careers with <span className="gradient-text-primary">Skills That Matter</span>
             </h1>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Founded in Karve Nagar, Pune, Algorithm Tech Solutions is dedicated to training next-gen software engineers, automation testers, and AI operations professionals. We replace high-level academic theory with low-level hands-on project work.
+              Founded in Karve Nagar, Pune, AlgorithmTech Solutions is dedicated to training next-gen software engineers, automation testers, and AI operations professionals. We replace high-level academic theory with low-level hands-on project work.
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Whether you are an aspiring software tester looking to master Selenium automation, a developer wanting to deploy mobile products, or a non-tech learner stepping into AI operations via Data Annotation, we supply the pathways to get you hired.

@@ -31,7 +31,7 @@ export default function Footer() {
           <Link to="/" className="flex items-center gap-2.5">
             <img
               src={logoImg}
-              alt="Algorithm Tech Solutions Logo"
+              alt="AlgorithmTech Solutions Logo"
               className="w-10 h-10 object-contain rounded-full"
             />
             <div className="flex flex-col leading-none">
@@ -102,7 +102,7 @@ export default function Footer() {
         {/* Contact & Newsletter Column */}
         <div className="space-y-4 lg:col-span-3">
           <h4 className="font-display font-bold text-base tracking-tight text-white">Contact Info</h4>
-          <p className="font-bold text-white text-base whitespace-nowrap">Algorithm Tech IT Solutions Pvt. Ltd.</p>
+          <p className="font-bold text-white text-base whitespace-nowrap">AlgorithmTech IT Solutions Pvt. Ltd.</p>
           <ul className="space-y-3 text-sm text-white/90">
             <li className="flex items-start gap-2.5">
               <MapPin size={18} className="text-sky-400 shrink-0 mt-1" />
@@ -141,7 +141,7 @@ export default function Footer() {
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-sky-400 shrink-0" />
-              <span>admissions@algorithmtech.in</span>
+              <span>contact@algoitsolutions.com</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Globe size={16} className="text-sky-400 shrink-0" />
@@ -158,7 +158,7 @@ export default function Footer() {
       
       {/* Copyright Subfooter */}
       <Container className="border-t border-slate-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/70">
-        <p>&copy; {currentYear} Algorithm Tech Solutions Pvt. Ltd. All rights reserved.</p>
+        <p>&copy; {currentYear} AlgorithmTech Solutions Pvt. Ltd. All rights reserved.</p>
         <div className="flex gap-4">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
           <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

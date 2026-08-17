@@ -200,7 +200,7 @@ export default function CourseDetail() {
               </div>
               <h4 className="font-bold text-lg font-display">Industry-Recognized Certification</h4>
               <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
-                Upon successful completion of all conceptual lab evaluations and your major commercial portfolio project, Algorithm Tech issues a physical and secure digital completion certificate. You can embed this credential on LinkedIn to verify your competency to recruiters.
+                Upon successful completion of all conceptual lab evaluations and your major commercial portfolio project, AlgorithmTech issues a physical and secure digital completion certificate. You can embed this credential on LinkedIn to verify your competency to recruiters.
               </p>
             </CardContent>
           </Card>
@@ -252,7 +252,7 @@ export default function CourseDetail() {
                     <Input
                       label="Mobile Number"
                       name="phone"
-                      placeholder="E.g., +91 9881150150"
+                      placeholder="+91 98765 43210"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       error={errors.phone}
@@ -288,9 +288,9 @@ export default function CourseDetail() {
                   <Phone size={14} className="text-primary shrink-0" />
                   <span className="text-sm">+91 76662 24323, +91 84369 63334</span>
                 </a>
-                <a href="mailto:admissions@algorithmtech.in" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                <a href="mailto:contact@algoitsolutions.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
                   <Mail size={14} className="text-primary shrink-0" />
-                  <span>admissions@algorithmtech.in</span>
+                  <span>contact@algoitsolutions.com</span>
                 </a>
               </div>
             </div>

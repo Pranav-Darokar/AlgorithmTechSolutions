@@ -9,7 +9,7 @@ export const faqs = [
   },
   {
     question: "Is certification included?",
-    answer: "Yes. Every student who completes the syllabus criteria and passes the course projects receives a professional certification from Algorithm Tech Corporate Training Institute, indicating their hands-on skills."
+    answer: "Yes. Every student who completes the syllabus criteria and passes the course projects receives a professional certification from AlgorithmTech Corporate Training Institute, indicating their hands-on skills."
   },
   {
     question: "What are the batch timings?",
